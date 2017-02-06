@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::group(['middleware' => 'auth'],function (){
+    Route::get('/upload', 'PostController@getUpload');
+    Route::post('/upload', 'PostController@postUpload');
+});

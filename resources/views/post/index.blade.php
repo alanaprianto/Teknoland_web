@@ -13,7 +13,7 @@
                     <div class="panel-heading"><h3>List Post</h3></div>
                     <div class="panel-body">
                         <div class="action" style="margin-bottom: 10px">
-                            <a href="{{url('/upload/create')}}" type="button" class="btn btn-primary">Buat Tugas</a>
+                            <a href="{{url('/upload/create')}}" type="button" class="btn btn-primary">Buat Post</a>
                         </div>
                         <table class="table table-stripped" id="table-post" data-token="{{csrf_token()}}">
                             <thead>

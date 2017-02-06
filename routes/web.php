@@ -18,3 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::group(['middleware' => 'auth'],function (){
+    Route::get('/upload-index', 'PostController@getIndex');
+    Route::post('/get-post-list', 'PostController@getList');
+    Route::get('/upload/{param}', 'PostController@getUpload');
+    Route::post('/upload', 'PostController@postUpload');
+    Route::post('/upload/delete', 'PostController@deletePost');
+});

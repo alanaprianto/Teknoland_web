@@ -17,8 +17,8 @@ class CreateAttachmentsTable extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->string('location')->nullable();
-            $table->integer('post_id')->unsigned();
-            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
         });
     }

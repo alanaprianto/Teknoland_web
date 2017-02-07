@@ -10,7 +10,7 @@
   
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="generator" content="2014.1.1.284"/>
-  <title>Home</title>
+  <title>Teknoland</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="{{asset('css/site_global20c4.css?4233376348')}}"/>
   <link rel="stylesheet" type="text/css" href="{{asset('css/indexb97a.css?13889168')}}" id="pagesheet"/>

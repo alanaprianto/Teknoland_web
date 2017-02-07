@@ -9,10 +9,10 @@ class Attachment extends Model
     protected $fillable = [
         'name',
         'location',
-        'post_id'
+        'product_id'
     ];
 
     public function post(){
-        return $this->belongsTo('App\Post', 'post_id', 'id');
+        return $this->belongsTo('App\Product', 'product_id', 'id');
     }
 }

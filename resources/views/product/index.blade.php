@@ -10,12 +10,12 @@
                     </div>
                 @endif
                 <div class="panel">
-                    <div class="panel-heading"><h3>List Post</h3></div>
+                    <div class="panel-heading"><h3>List Produk</h3></div>
                     <div class="panel-body">
                         <div class="action" style="margin-bottom: 10px">
-                            <a href="{{url('/upload/create')}}" type="button" class="btn btn-primary">Buat Post</a>
+                            <a href="{{url('/product/create')}}" type="button" class="btn btn-primary">Tambah Produk</a>
                         </div>
-                        <table class="table table-stripped" id="table-post" data-token="{{csrf_token()}}">
+                        <table class="table table-stripped" id="table-product" data-token="{{csrf_token()}}">
                             <thead>
                             <tr>
                                 <th>No</th>
@@ -40,7 +40,7 @@
                 var $id = $this.data('id');
                 if (confirm('Apakah anda yakin akan menghapus postingan ini?')) {
                     var $form = $('<form />');
-                    $form.attr('action', '/upload/delete');
+                    $form.attr('action', '/product/delete');
                     $form.attr('method', 'post');
                     $form.css({
                         'display': 'none'

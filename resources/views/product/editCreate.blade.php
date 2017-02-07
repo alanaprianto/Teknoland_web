@@ -5,13 +5,13 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Upload File</div>
+                    <div class="panel-heading">{{$product ? 'Ubah Produk' : 'Tambah Produk'}}</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{url('/upload')}}"
+                        <form class="form-horizontal" role="form" method="POST" action="{{url('/product/modify')}}"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
-                            @if($post)
-                                <input type="hidden" name="post_id" value="{{$post->id}}">
+                            @if($product)
+                                <input type="hidden" name="product_id" value="{{$product->id}}">
                             @endif
 
                             <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
@@ -19,7 +19,7 @@
 
                                 <div class="col-md-6">
                                     <input id="title" type="text" class="form-control" name="title"
-                                           value="{{$post ?  $post->title : ''}}" required autofocus>
+                                           value="{{$product ?  $product->title : ''}}" required autofocus>
 
                                     @if ($errors->has('title'))
                                         <span class="help-block">
@@ -34,7 +34,7 @@
 
                                 <div class="col-md-6">
                                     <textarea id="desc" class="form-control" name="desc"
-                                              required>{{$post ?  $post->desc : ''}}</textarea>
+                                              required>{{$product ?  $product->desc : ''}}</textarea>
 
                                     @if ($errors->has('desc'))
                                         <span class="help-block">
@@ -44,8 +44,38 @@
                                 </div>
                             </div>
 
+                            <div class="form-group{{ $errors->has('stock') ? ' has-error' : '' }}">
+                                <label for="stock" class="col-md-4 control-label">Jumlah</label>
+
+                                <div class="col-md-6">
+                                    <input id="stock" type="text" class="form-control" name="stock"
+                                           value="{{$product ?  $product->stock : ''}}" required>
+
+                                    @if ($errors->has('stock'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('stock') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
+                                <label for="price" class="col-md-4 control-label">Harga</label>
+
+                                <div class="col-md-6">
+                                    <input id="price" type="text" class="form-control" name="price"
+                                           value="{{$product ?  $product->price : ''}}" required>
+
+                                    @if ($errors->has('price'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('price') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="form-group{{ $errors->has('file') ? ' has-error' : '' }}">
-                                <label for="file" class="col-md-4 control-label">File</label>
+                                <label for="file" class="col-md-4 control-label">Foto / Gambar</label>
 
                                 <div class="col-md-6">
                                     <input id="file" type="file" class="form-control" name="file[]" multiple>
@@ -55,10 +85,10 @@
                                         <strong>{{ $errors->first('file') }}</strong>
                                     </span>
                                     @endif
-                                    @if($post)
+                                    @if($product)
                                         <input type="hidden" name="ids" class="ids">
                                         <ul class="list-unstyled">
-                                            @foreach($post->attachments as $attachment)
+                                            @foreach($product->attachments as $attachment)
                                                 <li>
                                                     <a href="{{asset($attachment->location)}}">{{getFileName($attachment->location)}}</a><span
                                                             class="pull-right"><a class="remove-document"

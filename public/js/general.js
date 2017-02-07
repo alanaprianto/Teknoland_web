@@ -2,7 +2,7 @@
     var school = {};
     moment.locale('id');
 
-    school.postTable = function ($element, listUrl, csrf) {
+    school.productTable = function ($element, listUrl, csrf) {
         if (!$element.length) return null;
         return $element.DataTable({
             processing: true,
@@ -48,7 +48,7 @@
                     "orderable": false,
                     "searchable": false,
                     "mRender": function (data, type, row) {
-                        var edit = '<a href="/upload/edit?id=' + row.id + '">Edit</a>';
+                        var edit = '<a href="/product/edit?id=' + row.id + '">Edit</a>';
                         var remove = '<a href="javascript:;" class="btn-remove" data-id="' + row.id + '">Delete</a>';
                         return edit + ' | ' + remove;
                     }
@@ -67,7 +67,7 @@
     }
 
     $(document).ready(function () {
-        var $taskTable = school.postTable($('#table-post'), '/get-post-list', $('#table-post').data('token'));
+        var $taskTable = school.productTable($('#table-product'), '/product-list', $('#table-product').data('token'));
         if ($taskTable) {
             orderNumber($taskTable);
         }

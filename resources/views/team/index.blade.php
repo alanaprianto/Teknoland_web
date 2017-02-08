@@ -11,26 +11,37 @@
                             <a href="{{url('/team/create')}}" class="btn btn-primary">Tambah Team</a>
                         </div>
                         <div class="form-group">
-                            @forelse($teams as $team)
-                                <div class="col-md-3">
-                                    <span>{{$team->name}}</span>
-                                    <span>{{$team->job_position}}</span>
-                                    <span><a href="{{url('/team/edit?id='.$team->id)}}">Edit</a></span>
-                                    <span><img src="{{asset($team->photo)}}"></span>
-                                    <span>{{$team->social_media_account}}</span>
+                            @forelse($teams as $index => $team)
+                                <div class="row">
+                                    <h3>{{$index}}</h3>
+                                    @foreach($team as $item)
+                                        @set('socials', json_decode($item->social_media_account, true))
+                                        <div class="col-sm-3">
+                                            <div class="team-member">
+                                                <img src="{{asset($item->photo)}}" class="img-responsive img-circle"
+                                                     alt="">
+                                                <h4>{{$item->name}} <sub><a href="{{url('/team/edit?id='.$item->id)}}">Edit</a></sub>
+                                                </h4>
+                                                <p class="text-muted">{{$item->job_position}}</p>
+                                                <ul class="list-inline social-buttons">
+                                                    <li><a href="{{$socials[0]}}" target="_blank"><i
+                                                                    class="fa fa-facebook"></i></a>
+                                                    </li>
+                                                    <li><a href="{{$socials[1]}}" target="_blank"><i
+                                                                    class="fa fa-google-plus"></i></a>
+                                                    </li>
+                                                    <li><a href="{{$socials[2]}}" target="_blank"><i
+                                                                    class="fa fa-twitter"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
                             @empty
-                                <div class="col-md-3">
-                                    satu
-                                </div>
-                                <div class="col-md-3">
-                                    dua
-                                </div>
-                                <div class="col-md-3">
-                                    tiga
-                                </div>
-                                <div class="col-md-3">
-                                    empat
+                                <div class="col-md-12">
+                                    <label class="text-info">Belum Ada Team. Silahkan klik tombol "Tambah Team"
+                                        diatas.</label>
                                 </div>
                             @endforelse
                         </div>

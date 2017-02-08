@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="{{asset('/css/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>

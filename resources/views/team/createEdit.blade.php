@@ -33,9 +33,11 @@
                                 <label for="job_position" class="col-md-4 control-label">Jabatan</label>
 
                                 <div class="col-md-6">
-                                    <input id="job_position" type="text" class="form-control" name="job_position"
-                                           value="{{ $team ? $team->job_position : old('job_position') }}" required>
-
+                                    <select name="job_position" class="form-control">
+                                        @foreach(getJobPosition() as $jobPosition)
+                                            <option value="{{$jobPosition}}" {{$team && ($team->job_position == $jobPosition) ? 'selected' : ''}}>{{$jobPosition}}</option>
+                                        @endforeach
+                                    </select>
                                     @if ($errors->has('job_position'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('job_position') }}</strong>
@@ -74,7 +76,8 @@
                                             @if($index == 2)
                                                 <div class="row">
                                                     <div class="col-md-3"><span>Twitter</span></div>
-                                                    <div class="col-md-9"><input id="social_media_account" type="text" value="{{$item}}"
+                                                    <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                                 value="{{$item}}"
                                                                                  class="form-control"
                                                                                  name="social_media_account[]"
                                                                                  placeholder="exp : https://twitter.com/lans">

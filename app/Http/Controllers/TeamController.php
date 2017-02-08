@@ -11,7 +11,7 @@ class TeamController extends Controller
 {
     public function getIndex()
     {
-        $teams = Team::get();
+        $teams = Team::orderBy('job_position', 'asc')->get()->groupBy('job_position');
         return view('team.index', compact('teams'));
     }
 

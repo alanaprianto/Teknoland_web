@@ -43,6 +43,99 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="form-group{{ $errors->has('social_media') ? ' has-error' : '' }}">
+                                <label for="social_media" class="col-md-4 control-label">Sosial Media</label>
+
+                                <div class="col-md-6">
+                                    @if($team && $team->social_media_account)
+                                        @forelse($team->social_media_account as $index => $item)
+                                            @if($index == 0)
+                                                <div class="row">
+                                                    <div class="col-md-3"><span>Facebook</span></div>
+                                                    <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                                 value="{{$item}}"
+                                                                                 class="form-control"
+                                                                                 name="social_media_account[]"
+                                                                                 placeholder="exp : https://facebook.com/lans">
+                                                    </div>
+                                                </div>
+                                            @endif
+                                            @if($index == 1)
+                                                <div class="row">
+                                                    <div class="col-md-3"><span>Google + </span></div>
+                                                    <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                                 value="{{$item}}"
+                                                                                 class="form-control"
+                                                                                 name="social_media_account[]"
+                                                                                 placeholder="exp : https://plus.google.com/lans">
+                                                    </div>
+                                                </div>
+                                            @endif
+                                            @if($index == 2)
+                                                <div class="row">
+                                                    <div class="col-md-3"><span>Twitter</span></div>
+                                                    <div class="col-md-9"><input id="social_media_account" type="text" value="{{$item}}"
+                                                                                 class="form-control"
+                                                                                 name="social_media_account[]"
+                                                                                 placeholder="exp : https://twitter.com/lans">
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        @empty
+                                            <div class="row">
+                                                <div class="col-md-3"><span>Facebook</span></div>
+                                                <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                             class="form-control"
+                                                                             name="social_media_account[]"
+                                                                             placeholder="exp : https://facebook.com/lans">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3"><span>Google + </span></div>
+                                                <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                             class="form-control"
+                                                                             name="social_media_account[]"
+                                                                             placeholder="exp : https://plus.google.com/lans">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3"><span>Twitter</span></div>
+                                                <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                             class="form-control"
+                                                                             name="social_media_account[]"
+                                                                             placeholder="exp : https://twitter.com/lans">
+                                                </div>
+                                            </div>
+                                        @endforelse
+
+                                    @else
+                                        <div class="row">
+                                            <div class="col-md-3"><span>Facebook</span></div>
+                                            <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                         class="form-control"
+                                                                         name="social_media_account[]"
+                                                                         placeholder="exp : https://facebook.com/lans">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3"><span>Google + </span></div>
+                                            <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                         class="form-control"
+                                                                         name="social_media_account[]"
+                                                                         placeholder="exp : https://plus.google.com/lans">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3"><span>Twitter</span></div>
+                                            <div class="col-md-9"><input id="social_media_account" type="text"
+                                                                         class="form-control"
+                                                                         name="social_media_account[]"
+                                                                         placeholder="exp : https://twitter.com/lans">
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="form-group{{ $errors->has('photo') ? ' has-error' : '' }}">
                                 <label for="name" class="col-md-4 control-label">Upload Foto</label>
                                 <div class="col-md-6">

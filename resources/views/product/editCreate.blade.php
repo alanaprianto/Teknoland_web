@@ -78,7 +78,7 @@
                                 <label for="file" class="col-md-4 control-label">Foto / Gambar</label>
 
                                 <div class="col-md-6">
-                                    <input id="file" type="file" class="form-control" name="file[]" multiple>
+                                    <input id="file" type="file" class="form-control" accept="image/*" name="file[]" multiple>
 
                                     @if ($errors->has('file'))
                                         <span class="help-block">

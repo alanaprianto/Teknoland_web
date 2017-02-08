@@ -21,6 +21,7 @@ class TeamController extends Controller
         $id = $request->query('id');
         if ($param == 'edit' && $id) {
             $team = Team::find($id);
+            $team->social_media_account = json_decode($team->social_media_account, true);
         }
 
         return view('team.createEdit', compact('team'));
@@ -33,6 +34,7 @@ class TeamController extends Controller
             'job_position' => 'required|max:255'
         ]);
         $input = $request->except(['_token']);
+        $input['social_media_account'] = json_encode($input['social_media_account'], true);
         $path = 'uploads/photos';
         if (!File::exists($path)) {
             File::makeDirectory($path, $mode = 0777, true, true);

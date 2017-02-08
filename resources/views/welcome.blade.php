@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="html" lang="en-US">
+
 <head>
     <meta charset="utf-8"/>
     <title>Teknoland</title>
@@ -7,7 +8,6 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta content="" name="description"/>
     <meta content="" name="author"/>
-
     <!-- GLOBAL MANDATORY STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
     <link href="{{asset('css/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css"/>
@@ -23,6 +23,7 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="{{asset('css/font-awesome/css/font-awesome.css')}}"/>
 
 </head>
 <body id="body" data-spy="scroll" data-target=".header">
@@ -512,7 +513,7 @@
 <script src="js/components/swiper.min.js" type="text/javascript"></script>
 <script src="js/components/masonry.min.js" type="text/javascript"></script>
 <script src="js/components/google-map.min.js" type="text/javascript"></script>
-</body>
 
-<!-- Mirrored from vladimirchernyshov.ru/muse-template/tornado/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Feb 2017 06:55:27 GMT -->
+</head>
+</body>
 </html>

@@ -6,7 +6,7 @@
     <script type="text/javascript" href="{{asset('/js/general.js')}}"></script>
     <section id="main-content">
         <section class="wrapper">
-            <h3><i class="fa fa-angle-right"></i> Products <i
+            <h3><i class="fa fa-angle-right"></i> Teams <i
                         class="fa fa-angle-right"></i> {{$team ? "Edit" : "Create"}}</h3>
 
             <!-- BASIC FORM ELELEMNTS -->

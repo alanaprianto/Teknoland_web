@@ -247,50 +247,6 @@
                     </div>
                 @endforelse
             </div>
-            <!--// end row -->
-
-        {{--            <div class="row row-space-1">
-                        <div class="col-sm-4 sm-margin-b-2">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-notebook"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Useful Documentation</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
-                                        dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 sm-margin-b-2">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-speedometer"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Fast Delivery</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
-                                        dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-badge"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Free Plugins</h3>
-                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
-                                        dolor</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>
-                            </div>
-                        </div>
-                    </div>--}}
-        <!--// end row -->
         </div>
     </div>
 </div>

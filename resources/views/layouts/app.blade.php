@@ -112,6 +112,12 @@
                             <span>Services</span>
                         </a>
                     </li>
+                    <li class="sub-menu">
+                        <a href="{{ url('/messenges') }}">
+                            <i class="fa fa-inbox"></i>
+                            <span>Messenges</span>
+                        </a>
+                    </li>
                 </ul>
                 <!-- sidebar menu end-->
             </div>

@@ -31,4 +31,17 @@ Route::group(['middleware' => 'auth'],function (){
     Route::post('/team/modify', 'TeamController@postTeam');
 
     Route::get('/services', 'ServiceController@getIndex');
+    Route::post('/service-list', 'ServiceController@getList');
+    Route::get('/service/{param}', 'ServiceController@getService');
+    Route::post('/service/modify', 'ServiceController@postService');
+    Route::post('/service/delete', 'ServiceController@deleteService');
+
+
+    Route::get('/events', 'EventController@getIndex');
+    Route::post('/event-list', 'EventController@getList');
+    Route::get('/event/{param}', 'EventController@getEvent');
+    Route::post('/event/modify', 'EventController@postEvent');
+    Route::post('/event/delete', 'EventController@deleteEvent');
+
+
 });

@@ -171,10 +171,6 @@
         console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
     }
 </script>
-<footer class="site-footer">
-    <div class="text-center">
-        2017 - Teknoland
-    </div>
-</footer>
+
 </body>
 </html>

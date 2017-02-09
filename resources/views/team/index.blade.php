@@ -14,16 +14,16 @@
                             <a href="{{url('/team/create')}}" type="button" class="btn btn-primary">Tambah Team</a>
                         </div>
                         @forelse($teams as $index => $team)
-
-                                <h4 class="mb" ><i class="fa fa-angle-right"></i>{{$index}}</h4>
+                            <div class="row">
+                                <h4 class="mb"  style="margin: 10px" ><i class="fa fa-angle-right"></i>{{$index}}</h4>
                                 @foreach($team as $item)
                                     @set('socials', json_decode($item->social_media_account, true))
                                     <div class="col-sm-3">
                                         <div class="team-member">
                                             <img src="{{asset($item->photo)}}" class="img-responsive img-circle"
                                                  alt="">
-                                            <h4>{{$item->name}} <sub><a
-                                                            href="{{url('/team/edit?id='.$item->id)}}">Edit</a></sub>
+                                            <h4>{{$item->name}}
+                                                <sub><a href="{{url('/team/edit?id='.$item->id)}}" type="button" class="btn btn-primary">Edit</a></sub>
                                             </h4>
                                             <p class="text-muted">{{$item->job_position}}</p>
                                             <ul class="list-inline social-buttons">
@@ -38,7 +38,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-
+                                    </div>
                                 @endforeach
                             </div>
                         @empty
@@ -54,7 +54,6 @@
 
         </section>
         <! --/wrapper -->
-        
     </section><!-- /MAIN CONTENT -->
 
 @endsection

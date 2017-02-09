@@ -96,14 +96,21 @@
                     </li>
                     <li class="sub-menu">
                         <a href="{{ url('/teams') }}">
-                            <i class="fa fa-book"></i>
+                            <i class="fa fa-user-circle"></i>
                             <span>Teams</span>
                         </a>
-                        <ul class="sub">
-                            <li><a href="blank.html">Blank Page</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="lock_screen.html">Lock Screen</a></li>
-                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="{{ url('/events') }}">
+                            <i class="fa fa-book"></i>
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="{{ url('/services') }}">
+                            <i class="fa fa-book"></i>
+                            <span>Services</span>
+                        </a>
                     </li>
                 </ul>
                 <!-- sidebar menu end-->

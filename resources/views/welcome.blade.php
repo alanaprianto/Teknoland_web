@@ -457,15 +457,39 @@
                         <li><i class="margin-r-10 color-base icon-envelope"></i> hq@aitOnepage.com</li>
                     </ul>
                 </div>
-                <!-- End Contact List -->
+                <div class='col-sm-4'>
+                    <div class='form-group'>
+                        <label for='fname'>First Name</label>
+                        <input type='text' name='fname' class='form-control'/>
+                    </div>
+
+                    <div class='form-group'>
+                        <label for='email'>Email</label>
+                        <input type='text' name='email' class='form-control'/>
+                    </div>
+                    <div class='form-group'>
+                        <label for='subject'>Subject</label>
+                        <input type='text' name='supject' class='form-control'/>
+                    </div>
+                </div>
+                <div class='col-sm-4'>
+                    <div class='form-group'>
+                        <label for='message'>Message</label>
+                        <textarea class='form-control' name='message' rows='10'></textarea>
+                    </div>
+                    <div class='text-right'>
+                        <input type='submit' class='btn btn-primary' value='Submit'/>
+                    </div>
+                </div>
             </div>
-            <!--// end row -->
+            </form>
         </div>
     </div>
-    <!-- End Contact List -->
+</div>
+<!-- End Contact List -->
 
-    <!-- Google Map -->
-    <div id="map" class="map height-300"></div>
+<!-- Google Map -->
+<div id="map" class="map height-300"></div>
 </div>
 <!-- End Contact -->
 <!--========== END PAGE LAYOUT ==========-->
@@ -515,7 +539,7 @@
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
+            navigator.geolocation.getCurrentPosition(function (position) {
                 var pos = {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
@@ -524,7 +548,7 @@
                 infoWindow.setPosition(pos);
                 infoWindow.setContent('Location found.');
                 map.setCenter(pos);
-            }, function() {
+            }, function () {
                 handleLocationError(true, infoWindow, map.getCenter());
             });
         } else {
@@ -543,9 +567,6 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBtawZPqlODiSBzr2WaHBITKW1T5qZvaI&callback=initMap">
 </script>
-
-
-
 
 
 <!-- PAGE LEVEL SCRIPTS -->

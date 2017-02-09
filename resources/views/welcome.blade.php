@@ -289,7 +289,7 @@
                     <h4><a href="#">{{$product->title}}</a> <span
                                 class="text-uppercase margin-l-20">Rp. {{$product->price}}</span></h4>
                     <p>{{$product->desc}}</p>
-                    <a class="link" href="#">Read More</a>
+                    <a class="link" href="{{url('/view/product/'.$product->id)}}">Read More</a>
                 </div>
             @empty
             <!-- Latest Products -->

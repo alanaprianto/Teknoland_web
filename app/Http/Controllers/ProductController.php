@@ -81,4 +81,25 @@ class ProductController extends Controller
 
         return redirect()->back()->with('status', 'Berhasil menghapus product');
     }
+
+
+
+    public function editStock(Request $request){
+        $response = array();
+
+        try
+        {
+            $input = $request->all();
+            $product = Product::find($input['id']);
+            $product->update([
+                'stock' => $input['stock']
+            ]);
+
+            $response = array('is_success' => true, 'message' => $product->toArray());
+        }
+        catch (\Exception $e) {
+            $response = array('is_success' => false, 'message' => $e->getMessage());
+        }
+        return collect($response)->toJson();
+    }
 }

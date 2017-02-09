@@ -162,79 +162,6 @@
 </div>
 <!--// end row -->
 <!-- End About -->
-<!-- Latest Products -->
-<div id="products">
-    <div class="content-lg container">
-        <div class="row margin-b-40">
-            <div class="col-sm-6">
-                <h2>Latest Products</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna
-                    aliqua enim minim veniam exercitation</p>
-            </div>
-        </div>
-        <!--// end row -->
-
-        <div class="row">
-            @forelse($products as $product)
-                @set('image', $product->attachments->first())
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <img class="img-responsive" src="{{asset($image->location)}}"
-                             alt="Latest Products Image">
-                    </div>
-                    <h4><a href="#">{{$product->title}}</a> <span
-                                class="text-uppercase margin-l-20">Rp. {{$product->price}}</span></h4>
-                    <p>{{$product->desc}}</p>
-                    <a class="link" href="#">Read More</a>
-                </div>
-            @empty
-            <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}"
-                             alt="Latest Products Image">
-                    </div>
-                    <h4><a href="#">Workspace</a> <span class="text-uppercase margin-l-20">Management</span></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
-                        magna ut
-                        consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
-                </div>
-                <!-- End Latest Products -->
-
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <img class="img-responsive" src="{{asset('images/970x647/02.jpg')}}"
-                             alt="Latest Products Image">
-                    </div>
-                    <h4><a href="#">Minimalism</a> <span class="text-uppercase margin-l-20">Developmeny</span></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
-                        magna ut
-                        consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
-                </div>
-                <!-- End Latest Products -->
-
-                <!-- Latest Products -->
-                <div class="col-sm-4 sm-margin-b-50">
-                    <div class="margin-b-20">
-                        <img class="img-responsive" src="{{asset('images/970x647/03.jpg')}}"
-                             alt="Latest Products Image">
-                    </div>
-                    <h4><a href="#">Cleant Style</a> <span class="text-uppercase margin-l-20">Design</span></h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
-                        magna ut
-                        consequat siad esqudiat dolor</p>
-                    <a class="link" href="#">Read More</a>
-                </div>
-                <!-- End Latest Products -->
-            @endforelse
-        </div>
-        <!--// end row -->
-    </div>
-</div>
-<!-- End Latest Products -->
 
 <!-- Service -->
 <div id="service">
@@ -352,41 +279,61 @@
         <!--// end row -->
 
         <div class="row">
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}" alt="Latest Products Image">
+            @forelse($products as $product)
+                @set('image', $product->attachments->first())
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <img class="img-responsive" src="{{asset($image->location)}}"
+                             alt="Latest Products Image">
+                    </div>
+                    <h4><a href="#">{{$product->title}}</a> <span
+                                class="text-uppercase margin-l-20">Rp. {{$product->price}}</span></h4>
+                    <p>{{$product->desc}}</p>
+                    <a class="link" href="#">Read More</a>
                 </div>
-                <h4><a href="#">Workspace</a> <span class="text-uppercase margin-l-20">Management</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
+            @empty
+            <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}"
+                             alt="Latest Products Image">
+                    </div>
+                    <h4><a href="#">Workspace</a> <span class="text-uppercase margin-l-20">Management</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
+                        magna ut
+                        consequat siad esqudiat dolor</p>
+                    <a class="link" href="#">Read More</a>
+                </div>
+                <!-- End Latest Products -->
 
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/02.jpg')}}" alt="Latest Products Image">
+                <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <img class="img-responsive" src="{{asset('images/970x647/02.jpg')}}"
+                             alt="Latest Products Image">
+                    </div>
+                    <h4><a href="#">Minimalism</a> <span class="text-uppercase margin-l-20">Developmeny</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
+                        magna ut
+                        consequat siad esqudiat dolor</p>
+                    <a class="link" href="#">Read More</a>
                 </div>
-                <h4><a href="#">Minimalism</a> <span class="text-uppercase margin-l-20">Developmeny</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
+                <!-- End Latest Products -->
 
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/03.jpg')}}" alt="Latest Products Image">
+                <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <img class="img-responsive" src="{{asset('images/970x647/03.jpg')}}"
+                             alt="Latest Products Image">
+                    </div>
+                    <h4><a href="#">Cleant Style</a> <span class="text-uppercase margin-l-20">Design</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
+                        magna ut
+                        consequat siad esqudiat dolor</p>
+                    <a class="link" href="#">Read More</a>
                 </div>
-                <h4><a href="#">Cleant Style</a> <span class="text-uppercase margin-l-20">Design</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
+                <!-- End Latest Products -->
+            @endforelse
         </div>
         <!--// end row -->
     </div>
@@ -558,7 +505,48 @@
 <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
 <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
 <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U"></script>
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -6.8785306, lng: 107.5904651},
+            zoom: 4
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                infoWindow.setPosition(pos);
+                infoWindow.setContent('Location found.');
+                map.setCenter(pos);
+            }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+    }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBtawZPqlODiSBzr2WaHBITKW1T5qZvaI&callback=initMap">
+</script>
+
+
+
+
 
 <!-- PAGE LEVEL SCRIPTS -->
 <script src="js/layout.min.js" type="text/javascript"></script>

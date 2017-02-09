@@ -41,6 +41,8 @@
                             <tr>
                                 <th>No</th>
                                 <th>Judul</th>
+                                <th>Stock</th>
+                                <th>Harga</th>
                                 <th>Desc</th>
                                 <th>Tanggal Dibuat</th>
                                 <th>Action</th>

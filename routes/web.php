@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth'],function (){
     Route::get('/product/{param}', 'ProductController@getProduct');
     Route::post('/product/modify', 'ProductController@postProduct');
     Route::post('/product/delete', 'ProductController@deleteProduct');
+    Route::post('/product/editstock', 'ProductController@editStock');
 
     Route::get('/teams', 'TeamController@getIndex');
     Route::get('/team/{param}', 'TeamController@getCreateEdit');

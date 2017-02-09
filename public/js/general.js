@@ -36,6 +36,17 @@
                     "searchable": false
                 },
                 {data: 'title', name: 'title'},
+                {
+                    "data": '',
+                    "defaultContent": '',
+                    "orderable": false,
+                    "searchable": false,
+                    "mRender": function (data, type, row) {
+                        var input = '<input class="input-stock" style="width: 30%" type="number" min="0" value="'+row.stock+'" data-id="'+row.id+'">';
+                        return input;
+                    }
+                },
+                {data: 'price', name: 'price'},
                 {data: 'desc', name: 'desc'},
                 {
                     data: 'created_at', name: 'users.created_at', "render": function (data, type, full, meta) {
@@ -43,13 +54,13 @@
                 }
                 },
                 {
-                    "data": 'id',
+                    "data": '',
                     "defaultContent": '',
                     "orderable": false,
                     "searchable": false,
                     "mRender": function (data, type, row) {
-                        var edit = '<a href="/product/edit?id=' + row.id + '">Edit</a>';
-                        var remove = '<a href="javascript:;" class="btn-remove" data-id="' + row.id + '">Delete</a>';
+                        var edit = '<a href="/product/edit?id=' + row.id + '"><i class="fa fa-edit"></i></a>';
+                        var remove = '<a href="javascript:;" class="btn-remove" data-id="' + row.id + '"><i class="fa fa-remove"></i></a>';
                         return edit + ' | ' + remove;
                     }
                 }
@@ -65,12 +76,37 @@
             });
         }).draw();
     }
+    function updateStock(value, id) {
+        var csrf = $('meta[name="csrf-token"]').attr('content');
+        $.ajax({
+            url: "/product/editstock",
+            data: {
+                "_token": csrf,
+                "stock": value,
+                "id": id
+            },
+            type: 'POST',
+            success : function (data) {
+                var object = JSON.parse(data);
+                if(!object.is_success){
+                    alert(object.message);
+                }
+            }
+        });
+    }
 
     $(document).ready(function () {
         var $taskTable = school.productTable($('#table-product'), '/product-list', $('#table-product').data('token'));
         if ($taskTable) {
             orderNumber($taskTable);
         }
+
+        $(document).on('change', '.input-stock', function () {
+            $this = $(this);
+            var value = $this.val();
+            var id = $this.data('id');
+            updateStock(value, id)
+        });
 
     });
 

@@ -477,7 +477,12 @@
     <div class="section-seperator">
         <div class="content-lg container">
             <div class="row">
-                <!-- Contact List -->
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+            @endif
+            <!-- Contact List -->
                 <div class="col-sm-4 sm-margin-b-50">
                     <h3><a href="#">Bandung</a> <span class="text-uppercase margin-l-20">Head Office</span></h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
@@ -487,30 +492,33 @@
                         <li><i class="margin-r-10 color-base icon-envelope"></i> hq@aitOnepage.com</li>
                     </ul>
                 </div>
-                <div class='col-sm-4'>
-                    <div class='form-group'>
-                        <label for='fname'>First Name</label>
-                        <input type='text' name='fname' class='form-control'/>
-                    </div>
+                <form method="post" action="{{url('/send/message')}}">
+                    {{csrf_field()}}
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+                            <label for='fname'>Name</label>
+                            <input type='text' name='name' class='form-control' required/>
+                        </div>
 
-                    <div class='form-group'>
-                        <label for='email'>Email</label>
-                        <input type='text' name='email' class='form-control'/>
+                        <div class='form-group'>
+                            <label for='email'>Email</label>
+                            <input type='email' name='email' class='form-control' required/>
+                        </div>
+                        <div class='form-group'>
+                            <label for='subject'>Subject</label>
+                            <input type='text' name='subject' class='form-control' required/>
+                        </div>
                     </div>
-                    <div class='form-group'>
-                        <label for='subject'>Subject</label>
-                        <input type='text' name='supject' class='form-control'/>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+                            <label for='message'>Message</label>
+                            <textarea class='form-control' name='message' rows='10' required></textarea>
+                        </div>
+                        <div class='text-right'>
+                            <input type='submit' class='btn btn-primary' value='Submit'/>
+                        </div>
                     </div>
-                </div>
-                <div class='col-sm-4'>
-                    <div class='form-group'>
-                        <label for='message'>Message</label>
-                        <textarea class='form-control' name='message' rows='10'></textarea>
-                    </div>
-                    <div class='text-right'>
-                        <input type='submit' class='btn btn-primary' value='Submit'/>
-                    </div>
-                </div>
+                </form>
             </div>
             </form>
         </div>

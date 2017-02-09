@@ -175,6 +175,61 @@
             ]
         });
     };
+    school.messageTable = function ($element, listUrl, csrf) {
+        if (!$element.length) return null;
+        return $element.DataTable({
+            processing: true,
+            serverSide: true,
+            "deferRender": true,
+            responsive: true,
+            ajax: {
+                'url': listUrl,
+                'type': 'POST',
+                'headers': {
+                    'X-CSRF-TOKEN': csrf
+                }
+            },
+            dom: 'lBfrtip',
+            "order": [[1, 'asc']],
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            buttons: [
+                {
+                    extend: 'print',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5, 6]
+                    },
+                    title: $('.print-datatable').attr('title')
+                }
+            ],
+            columns: [
+                {
+                    data: 'id',
+                    name: 'id',
+                    "orderable": false,
+                    "searchable": false
+                },
+                {data: 'name', name: 'name'},
+                {data: 'email', name: 'email'},
+                {data: 'subject', name: 'subject'},
+                {data: 'message', name: 'message'},
+                {
+                    data: 'created_at', name: 'created_at', "render": function (data, type, full, meta) {
+                    return moment(data).format('LLL')
+                }
+                },
+                {
+                    "data": '',
+                    "defaultContent": '',
+                    "orderable": false,
+                    "searchable": false,
+                    "mRender": function (data, type, row) {
+                        var remove = '<a href="javascript:;" class="btn-remove" data-id="' + row.id + '"><i class="fa fa-remove"></i></a>';
+                        return remove;
+                    }
+                }
+            ]
+        });
+    };
 
 
     function orderNumber($datatable) {
@@ -218,6 +273,11 @@
         var $eventTable = school.eventTable($('#table-event'), '/event-list', $('#table-event').data('token'));
         if ($eventTable) {
             orderNumber($eventTable);
+        }
+
+        var $messageTable = school.messageTable($('#table-message'), '/message-list', $('#table-message').data('token'));
+        if ($messageTable) {
+            orderNumber($messageTable);
         }
 
         $(document).on('change', '.input-stock', function () {

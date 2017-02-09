@@ -16,6 +16,7 @@ Route::get('/', 'FrontController@getWelcome');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::post('/send/message', 'FrontController@sendMessage');
 
 
 Route::group(['middleware' => 'auth'],function (){
@@ -42,6 +43,12 @@ Route::group(['middleware' => 'auth'],function (){
     Route::get('/event/{param}', 'EventController@getEvent');
     Route::post('/event/modify', 'EventController@postEvent');
     Route::post('/event/delete', 'EventController@deleteEvent');
+
+
+    Route::get('/messages', 'HomeController@getIndex');
+    Route::post('/message-list', 'HomeController@getList');
+    Route::post('/message/delete', 'HomeController@deleteMessage');
+
 
 
 });

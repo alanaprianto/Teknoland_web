@@ -177,90 +177,120 @@
             <!--// end row -->
 
             <div class="row row-space-1 margin-b-2">
-                <div class="col-sm-4 sm-margin-b-2">
-                    <div class="service" data-height="height">
-                        <div class="service-element">
-                            <i class="service-icon icon-chemistry"></i>
+                @forelse($services as $service)
+                    @if($loop->index != 1)
+                        <div class="col-sm-4 sm-margin-b-2">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-chemistry"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>{{$service->title}}</h3>
+                                    <p class="margin-b-5">{{$service->desc}}</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
                         </div>
-                        <div class="service-info">
-                            <h3>Art Of Coding</h3>
-                            <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
-                                dolor</p>
+                    @else
+                        <div class="col-sm-4 sm-margin-b-2">
+                            <div class="service bg-color-base" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon color-white icon-screen-tablet"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 class="color-white">{{$service->title}}</h3>
+                                    <p class="color-white margin-b-5">{{$service->desc}}</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
                         </div>
-                        <a href="#" class="content-wrapper-link"></a>
+                    @endif
+                @empty
+                    <div class="col-sm-4 sm-margin-b-2">
+                        <div class="service" data-height="height">
+                            <div class="service-element">
+                                <i class="service-icon icon-chemistry"></i>
+                            </div>
+                            <div class="service-info">
+                                <h3>Art Of Coding</h3>
+                                <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
+                                    dolor</p>
+                            </div>
+                            <a href="#" class="content-wrapper-link"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4 sm-margin-b-2">
-                    <div class="service bg-color-base" data-height="height">
-                        <div class="service-element">
-                            <i class="service-icon color-white icon-screen-tablet"></i>
+                    <div class="col-sm-4 sm-margin-b-2">
+                        <div class="service bg-color-base" data-height="height">
+                            <div class="service-element">
+                                <i class="service-icon color-white icon-screen-tablet"></i>
+                            </div>
+                            <div class="service-info">
+                                <h3 class="color-white">Responsive Design</h3>
+                                <p class="color-white margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad
+                                    esqudiat dolor</p>
+                            </div>
+                            <a href="#" class="content-wrapper-link"></a>
                         </div>
-                        <div class="service-info">
-                            <h3 class="color-white">Responsive Design</h3>
-                            <p class="color-white margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad
-                                esqudiat dolor</p>
-                        </div>
-                        <a href="#" class="content-wrapper-link"></a>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="service" data-height="height">
-                        <div class="service-element">
-                            <i class="service-icon icon-badge"></i>
+                    <div class="col-sm-4">
+                        <div class="service" data-height="height">
+                            <div class="service-element">
+                                <i class="service-icon icon-badge"></i>
+                            </div>
+                            <div class="service-info">
+                                <h3>Feature Reach</h3>
+                                <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
+                                    dolor</p>
+                            </div>
+                            <a href="#" class="content-wrapper-link"></a>
                         </div>
-                        <div class="service-info">
-                            <h3>Feature Reach</h3>
-                            <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
-                                dolor</p>
-                        </div>
-                        <a href="#" class="content-wrapper-link"></a>
                     </div>
-                </div>
+                @endforelse
             </div>
             <!--// end row -->
 
-            <div class="row row-space-1">
-                <div class="col-sm-4 sm-margin-b-2">
-                    <div class="service" data-height="height">
-                        <div class="service-element">
-                            <i class="service-icon icon-notebook"></i>
+        {{--            <div class="row row-space-1">
+                        <div class="col-sm-4 sm-margin-b-2">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-notebook"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Useful Documentation</h3>
+                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
+                                        dolor</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
                         </div>
-                        <div class="service-info">
-                            <h3>Useful Documentation</h3>
-                            <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
-                                dolor</p>
+                        <div class="col-sm-4 sm-margin-b-2">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-speedometer"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Fast Delivery</h3>
+                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
+                                        dolor</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
                         </div>
-                        <a href="#" class="content-wrapper-link"></a>
-                    </div>
-                </div>
-                <div class="col-sm-4 sm-margin-b-2">
-                    <div class="service" data-height="height">
-                        <div class="service-element">
-                            <i class="service-icon icon-speedometer"></i>
+                        <div class="col-sm-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Free Plugins</h3>
+                                    <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
+                                        dolor</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
                         </div>
-                        <div class="service-info">
-                            <h3>Fast Delivery</h3>
-                            <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
-                                dolor</p>
-                        </div>
-                        <a href="#" class="content-wrapper-link"></a>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="service" data-height="height">
-                        <div class="service-element">
-                            <i class="service-icon icon-badge"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Free Plugins</h3>
-                            <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
-                                dolor</p>
-                        </div>
-                        <a href="#" class="content-wrapper-link"></a>
-                    </div>
-                </div>
-            </div>
-            <!--// end row -->
+                    </div>--}}
+        <!--// end row -->
         </div>
     </div>
 </div>
@@ -515,7 +545,7 @@
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
+            navigator.geolocation.getCurrentPosition(function (position) {
                 var pos = {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
@@ -524,7 +554,7 @@
                 infoWindow.setPosition(pos);
                 infoWindow.setContent('Location found.');
                 map.setCenter(pos);
-            }, function() {
+            }, function () {
                 handleLocationError(true, infoWindow, map.getCenter());
             });
         } else {
@@ -543,9 +573,6 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBtawZPqlODiSBzr2WaHBITKW1T5qZvaI&callback=initMap">
 </script>
-
-
-
 
 
 <!-- PAGE LEVEL SCRIPTS -->

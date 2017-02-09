@@ -52,36 +52,6 @@
             </div>
         </section>
     </section>
-    {{--    <div class="container" style="margin-top: 20px">
-            <div class="row">
-                <div class="col-md-12">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <div class="panel">
-                        <div class="panel-heading"><h3>List Produk</h3></div>
-                        <div class="panel-body">
-                            <div class="action" style="margin-bottom: 10px">
-                                <a href="{{url('/product/create')}}" type="button" class="btn btn-primary">Tambah Produk</a>
-                            </div>
-                            <table class="table table-stripped" id="table-product" data-token="{{csrf_token()}}">
-                                <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Judul</th>
-                                    <th>Desc</th>
-                                    <th>Tanggal Dibuat</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>--}}
 @endsection
 @section('scripts')
     <script type="text/javascript">

@@ -29,4 +29,6 @@ Route::group(['middleware' => 'auth'],function (){
     Route::get('/teams', 'TeamController@getIndex');
     Route::get('/team/{param}', 'TeamController@getCreateEdit');
     Route::post('/team/modify', 'TeamController@postTeam');
+
+    Route::get('/services', 'ServiceController@getIndex');
 });

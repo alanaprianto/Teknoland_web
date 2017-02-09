@@ -42,9 +42,10 @@
                                 @endforeach
                             </div>
                         @empty
+                            <div class="row">
                             <div class="col-md-12">
-                                <label class="text-info">Belum Ada Team. Silahkan klik tombol "Tambah Team"
-                                    diatas.</label>
+                                <label class="text-info">Belum Ada Team. Silahkan klik tombol "Tambah Team"diatas.</label>
+                            </div>
                             </div>
                         @endforelse
                     </div>

@@ -4,15 +4,18 @@
 
     <section id="main-content">
         <section class="wrapper">
-            <h3><i class="fa fa-angle-right"></i> Our Team</h3>
+            <h3> Teams</h3>
 
             <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
                 <div class="col-lg-12">
                     <div class="form-panel">
+                        <div class="action" style="margin-bottom: 10px">
+                            <a href="{{url('/team/create')}}" type="button" class="btn btn-primary">Tambah Team</a>
+                        </div>
                         @forelse($teams as $index => $team)
-                            <div class="row">
-                                <h4 class="mb"><i class="fa fa-angle-right"></i> {{$index}}</h4>
+
+                                <h4 class="mb" ><i class="fa fa-angle-right"></i>{{$index}}</h4>
                                 @foreach($team as $item)
                                     @set('socials', json_decode($item->social_media_account, true))
                                     <div class="col-sm-3">
@@ -35,7 +38,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    
                                 @endforeach
                             </div>
                         @empty

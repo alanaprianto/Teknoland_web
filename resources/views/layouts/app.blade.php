@@ -80,20 +80,20 @@
                     <h5 class="centered">{{ Auth::user()->name }}</h5>
 
                     <li class="mt">
-                        <a  href="{{ url('home') }}">
+                        <a href="{{ url('home') }}">
                             <i class="fa fa-dashboard"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
 
                     <li class="sub-menu">
-                        <a href="{{ url('product/index') }}">
+                        <a href="{{ url('/products') }}">
                             <i class="fa fa-desktop"></i>
                             <span>Product</span>
                         </a>
                     </li>
                     <li class="sub-menu">
-                        <a href="javascript:;">
+                        <a href="{{ url('/teams') }}">
                             <i class="fa fa-book"></i>
                             <span>Teams</span>
                         </a>
@@ -120,8 +120,8 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    @yield('css')
-    @yield('content')
+@yield('css')
+@yield('content')
 <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="{{ asset('js/jquery.dataTables.js') }}"></script>
@@ -156,7 +156,7 @@
             },
             legend: [
                 {type: "text", label: "Special event", badge: "00"},
-                {type: "block", label: "Regular event", }
+                {type: "block", label: "Regular event",}
             ]
         });
     });
@@ -169,5 +169,10 @@
         console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
     }
 </script>
+<footer class="site-footer">
+    <div class="text-center">
+        2017 - Teknoland
+    </div>
+</footer>
 </body>
 </html>

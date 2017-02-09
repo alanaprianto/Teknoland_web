@@ -19,7 +19,7 @@
 
     <!-- THEME STYLES -->
     <link href="{{asset('css/layout.min.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="{{asset('css/agency.min.css')}}" rel="stylesheet" type="text/css"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico"/>
@@ -54,15 +54,11 @@
             <div class="collapse navbar-collapse nav-collapse">
                 <div class="menu-container">
                     <ul class="nav navbar-nav navbar-nav-right">
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a>
-                        </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
-                                                            href="#about">About</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#products">Products</a>
-                        </li>
+
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li>
                         <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#service">Service</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Work</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#products">Products</a>
                         </li>
                         <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#team">Team</a>
                         </li>
@@ -95,7 +91,7 @@
             <div class="container">
                 <div class="carousel-centered">
                     <div class="margin-b-40">
-                        <h1 class="carousel-title">Hi-Tech Design</h1>
+                        <h1 class="carousel-title">Teknoland Mitra Solusi</h1>
                         <p class="color-white">Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br/>
                             enim minim estudiat veniam siad venumus dolore</p>
                     </div>
@@ -108,7 +104,7 @@
             <div class="container">
                 <div class="carousel-centered">
                     <div class="margin-b-40">
-                        <h2 class="carousel-title">Hi-Tech Design</h2>
+                        <h2 class="carousel-title">Hi-Tech </h2>
                         <p class="color-white">Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br/>
                             enim minim estudiat veniam siad venumus dolore</p>
                     </div>
@@ -129,7 +125,7 @@
             <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
             <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
                 <div class="margin-b-60">
-                    <h2>Art Of Coding</h2>
+                    <h2>System Informasi Manajemen KLinik </h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore
                         magna ut consequat siad esqudiat dolor</p>
                 </div>
@@ -165,61 +161,6 @@
 </div>
 <!--// end row -->
 <!-- End About -->
-
-<!-- Latest Products -->
-<div id="products">
-    <div class="content-lg container">
-        <div class="row margin-b-40">
-            <div class="col-sm-6">
-                <h2>Latest Products</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna
-                    aliqua enim minim veniam exercitation</p>
-            </div>
-        </div>
-        <!--// end row -->
-
-        <div class="row">
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}" alt="Latest Products Image">
-                </div>
-                <h4><a href="#">Workspace</a> <span class="text-uppercase margin-l-20">Management</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
-
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/02.jpg')}}" alt="Latest Products Image">
-                </div>
-                <h4><a href="#">Minimalism</a> <span class="text-uppercase margin-l-20">Developmeny</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
-
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/03.jpg')}}" alt="Latest Products Image">
-                </div>
-                <h4><a href="#">Cleant Style</a> <span class="text-uppercase margin-l-20">Design</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
-        </div>
-        <!--// end row -->
-    </div>
-</div>
-<!-- End Latest Products -->
-
 <!-- Service -->
 <div id="service">
     <div class="bg-color-sky-light" data-auto-height="true">
@@ -322,6 +263,62 @@
     </div>
 </div>
 <!-- End Service -->
+
+<!-- Latest Products -->
+<div id="products">
+    <div class="content-lg container">
+        <div class="row margin-b-40">
+            <div class="col-sm-6">
+                <h2>Latest Products</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna
+                    aliqua enim minim veniam exercitation</p>
+            </div>
+        </div>
+        <!--// end row -->
+
+        <div class="row">
+            <!-- Latest Products -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="margin-b-20">
+                    <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}" alt="Latest Products Image">
+                </div>
+                <h4><a href="#">Workspace</a> <span class="text-uppercase margin-l-20">Management</span></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
+                    consequat siad esqudiat dolor</p>
+                <a class="link" href="#">Read More</a>
+            </div>
+            <!-- End Latest Products -->
+
+            <!-- Latest Products -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="margin-b-20">
+                    <img class="img-responsive" src="{{asset('images/970x647/02.jpg')}}" alt="Latest Products Image">
+                </div>
+                <h4><a href="#">Minimalism</a> <span class="text-uppercase margin-l-20">Developmeny</span></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
+                    consequat siad esqudiat dolor</p>
+                <a class="link" href="#">Read More</a>
+            </div>
+            <!-- End Latest Products -->
+
+            <!-- Latest Products -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="margin-b-20">
+                    <img class="img-responsive" src="{{asset('images/970x647/03.jpg')}}" alt="Latest Products Image">
+                </div>
+                <h4><a href="#">Cleant Style</a> <span class="text-uppercase margin-l-20">Design</span></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
+                    consequat siad esqudiat dolor</p>
+                <a class="link" href="#">Read More</a>
+            </div>
+            <!-- End Latest Products -->
+        </div>
+        <!--// end row -->
+    </div>
+</div>
+<!-- End Latest Products -->
+
+
 <!-- Team Section -->
 <section id="team" class="bg-light-gray">
     <div class="container">
@@ -392,7 +389,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
@@ -431,55 +428,14 @@
 
 <!--========== FOOTER ==========-->
 <footer class="footer">
-    <!-- Links -->
-    <div class="section-seperator">
-        <div class="content-md container">
-            <div class="row">
-                <div class="col-sm-2 sm-margin-b-30">
-                    <!-- List -->
-                    <ul class="list-unstyled footer-list">
-                        <li class="footer-list-item"><a href="#">Home</a></li>
-                        <li class="footer-list-item"><a href="#">About</a></li>
-                        <li class="footer-list-item"><a href="#">Work</a></li>
-                        <li class="footer-list-item"><a href="#">Contact</a></li>
-                    </ul>
-                    <!-- End List -->
-                </div>
-                <div class="col-sm-2 sm-margin-b-30">
-                    <!-- List -->
-                    <ul class="list-unstyled footer-list">
-                        <li class="footer-list-item"><a href="#">Twitter</a></li>
-                        <li class="footer-list-item"><a href="#">Facebook</a></li>
-                        <li class="footer-list-item"><a href="#">Instagram</a></li>
-                        <li class="footer-list-item"><a href="#">YouTube</a></li>
-                    </ul>
-                    <!-- End List -->
-                </div>
-                <div class="col-sm-3">
-                    <!-- List -->
-                    <ul class="list-unstyled footer-list">
-                        <li class="footer-list-item"><a href="#">Subscribe to Our Newsletter</a></li>
-                        <li class="footer-list-item"><a href="#">Privacy Policy</a></li>
-                        <li class="footer-list-item"><a href="#">Terms &amp; Conditions</a></li>
-                    </ul>
-                    <!-- End List -->
-                </div>
-            </div>
-            <!--// end row -->
-        </div>
-    </div>
-    <!-- End Links -->
 
-    <!-- Copyright -->
     <div class="content container">
         <div class="row">
             <div class="col-xs-6">
-                <img class="footer-logo" src="{{asset('images/logo-dark.png')}}" alt="Aitonepage Logo">
+                <img class="footer-logo" src="{{asset('images/logo-dark.png')}}" alt="teknoland">
             </div>
             <div class="col-xs-6 text-right">
-                <p class="margin-b-0"><a class="fweight-700"
-                                         href="http://keenthemes.com/preview/aitonepage/">Aitonepage</a> Theme Powered
-                    by: <a class="fweight-700" href="http://www.keenthemes.com/"></a></p>
+                <p class="margin-b-0"><a>Tecknoland</a>
             </div>
         </div>
         <!--// end row -->

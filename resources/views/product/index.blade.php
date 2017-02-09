@@ -1,6 +1,51 @@
 @extends('layouts.app')
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <!-- Bootstrap core CSS -->
+    <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
+    <!--external css-->
+    <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/style-responsive.css')}}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
 @section('content')
     <script type="text/javascript" href="{{asset('/js/general.js')}}"></script>
+    <section id="main-content">
+        <section class="wrapper">
+            <h3><i class="fa fa-angle-right"></i> Form Components</h3>
+
+            <!-- BASIC FORM ELELEMNTS -->
+            <div class="row mt">
+                <div class="col-lg-12">
+                    <div class="form-panel">
+                        <h4 class="mb"><i class="fa fa-angle-right"></i> Form Elements</h4>
+                        <form class="form-horizontal style-form" method="get">
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">Default</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
     <div class="container" style="margin-top: 20px">
         <div class="row">
             <div class="col-md-12">

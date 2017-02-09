@@ -38,7 +38,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    
+
                                 @endforeach
                             </div>
                         @empty
@@ -54,6 +54,7 @@
 
         </section>
         <! --/wrapper -->
+        
     </section><!-- /MAIN CONTENT -->
 
 @endsection

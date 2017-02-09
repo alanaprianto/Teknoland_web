@@ -179,41 +179,60 @@
         <!--// end row -->
 
         <div class="row">
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}" alt="Latest Products Image">
+        @forelse($products as $product)
+            @set('image', $product->attachments->first())
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <img class="img-responsive" src="{{asset($image->location)}}"
+                             alt="Latest Products Image">
+                    </div>
+                    <h4><a href="#">{{$product->title}}</a> <span class="text-uppercase margin-l-20">Rp. {{$product->price}}</span></h4>
+                    <p>{{$product->desc}}</p>
+                    <a class="link" href="#">Read More</a>
                 </div>
-                <h4><a href="#">Workspace</a> <span class="text-uppercase margin-l-20">Management</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
+        @empty
+            <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}"
+                             alt="Latest Products Image">
+                    </div>
+                    <h4><a href="#">Workspace</a> <span class="text-uppercase margin-l-20">Management</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
+                        magna ut
+                        consequat siad esqudiat dolor</p>
+                    <a class="link" href="#">Read More</a>
+                </div>
+                <!-- End Latest Products -->
 
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/02.jpg')}}" alt="Latest Products Image">
+                <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <img class="img-responsive" src="{{asset('images/970x647/02.jpg')}}"
+                             alt="Latest Products Image">
+                    </div>
+                    <h4><a href="#">Minimalism</a> <span class="text-uppercase margin-l-20">Developmeny</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
+                        magna ut
+                        consequat siad esqudiat dolor</p>
+                    <a class="link" href="#">Read More</a>
                 </div>
-                <h4><a href="#">Minimalism</a> <span class="text-uppercase margin-l-20">Developmeny</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
+                <!-- End Latest Products -->
 
-            <!-- Latest Products -->
-            <div class="col-sm-4 sm-margin-b-50">
-                <div class="margin-b-20">
-                    <img class="img-responsive" src="{{asset('images/970x647/03.jpg')}}" alt="Latest Products Image">
+                <!-- Latest Products -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <img class="img-responsive" src="{{asset('images/970x647/03.jpg')}}"
+                             alt="Latest Products Image">
+                    </div>
+                    <h4><a href="#">Cleant Style</a> <span class="text-uppercase margin-l-20">Design</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
+                        magna ut
+                        consequat siad esqudiat dolor</p>
+                    <a class="link" href="#">Read More</a>
                 </div>
-                <h4><a href="#">Cleant Style</a> <span class="text-uppercase margin-l-20">Design</span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut
-                    consequat siad esqudiat dolor</p>
-                <a class="link" href="#">Read More</a>
-            </div>
-            <!-- End Latest Products -->
+                <!-- End Latest Products -->
+            @endforelse
         </div>
         <!--// end row -->
     </div>
@@ -327,75 +346,95 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 >Our Amazing Team</h1>
+                <h1>Our Amazing Team</h1>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3">
-                <div class="team-member">
-                    <img src="images/man1-u581-fr.jpg" class="img-responsive img-circle" alt="">
-                    <h4>Kay Garland</h4>
-                    <p class="text-muted">Lead Designer</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
+            @forelse($teams as $team)
+                @set('socials', json_decode($team->social_media_account, true))
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="{{asset($team->photo)}}" class="img-responsive img-circle" alt="">
+                        <h4>{{$team->name}}</h4>
+                        <p class="text-muted">{{$team->job_position}}</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="{{$socials[0]}}"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="{{$socials[1]}}"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="{{$socials[2]}}"><i class="fa fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="team-member">
-                    <img src="images/woman1-u742-fr.jpg" class="img-responsive img-circle" alt="">
-                    <h4>Yuli </h4>
-                    <p class="text-muted">Lead Marketer</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
+            @empty
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/man1-u581-fr.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Kay Garland</h4>
+                        <p class="text-muted">Lead Designer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="team-member">
-                    <img src="images/woman2-u781-fr.jpg" class="img-responsive img-circle" alt="">
-                    <h4>Diana Pertersen</h4>
-                    <p class="text-muted">Lead Developer</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/woman1-u742-fr.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Yuli </h4>
+                        <p class="text-muted">Lead Marketer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="team-member">
-                    <img src="images/woman2-u781-fr.jpg" class="img-responsive img-circle" alt="">
-                    <h4>Diana Pertersen</h4>
-                    <p class="text-muted">Lead Developer</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/woman2-u781-fr.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Diana Pertersen</h4>
+                        <p class="text-muted">Lead Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/woman2-u781-fr.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Diana Pertersen</h4>
+                        <p class="text-muted">Lead Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            @endforelse
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
+                    laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
             </div>
         </div>
     </div>

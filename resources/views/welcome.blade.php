@@ -162,8 +162,6 @@
 </div>
 <!--// end row -->
 <!-- End About -->
-<<<<<<< HEAD
-
 <!-- Latest Products -->
 <div id="products">
     <div class="content-lg container">
@@ -238,8 +236,6 @@
 </div>
 <!-- End Latest Products -->
 
-=======
->>>>>>> 1ad855a4fcd8c915c95237057f082aca6fa0d15e
 <!-- Service -->
 <div id="service">
     <div class="bg-color-sky-light" data-auto-height="true">

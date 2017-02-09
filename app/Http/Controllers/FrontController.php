@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use App\Product;
 use App\Service;
 use App\Team;
@@ -16,5 +17,18 @@ class FrontController extends Controller
         $services = Service::inRandomOrder()->take(3)->get();
 
         return view('welcome', compact(['teams', 'products', 'services']));
+    }
+
+    public function sendMessage(Request $request){
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|max:255',
+            'subject' => 'required|max:255',
+            'message' => 'required|max:255',
+        ]);
+        $input = $request->except('_token');
+        $contact = Contact::create($input);
+
+        return redirect('/#contact')->with('status', 'Pesan anda telah kami terima. Terimakasih '.$contact->name.' telah mengirimkan pesan.');
     }
 }

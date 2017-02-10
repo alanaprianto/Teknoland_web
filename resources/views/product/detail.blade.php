@@ -1,18 +1,24 @@
 @extends('layouts.front')
 @section('css')
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
     <style type="text/css">
-        .carousel{
+        .carousel {
             background: #2f4357;
             margin-top: 20px;
         }
-        .carousel .item img{
+
+        .carousel .item img {
             margin: 0 auto; /* Align slide image horizontally center */
         }
-        .bs-example{
+
+        .bs-example {
             margin: 20px;
         }
     </style>
@@ -40,7 +46,7 @@
                 <hr>
 
                 <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on {{$product->created_at}}</p>
 
                 <hr>
 
@@ -54,27 +60,16 @@
                         </ol>
                         <!-- Wrapper for carousel items -->
                         <div class="carousel-inner">
-                            <div class="active item">
-                                <img src="../images/slide1.png" alt="First Slide">
-                                <div class="carousel-caption">
-                                    <h3>First slide label</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            @foreach($product->attachments as $attachment)
+                                <div class="@if($loop->index == 0) active @endif item">
+
+                                    <img src="/{{$attachment->location}}" alt="First Slide">
+                                    <div class="carousel-caption">
+                                        <h3>{{$attachment->name}}</h3>
+                                        <p></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <img src="../images/slide2.png" alt="Second Slide">
-                                <div class="carousel-caption">
-                                    <h3>Second slide label</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="../images/slide3.png" alt="Third Slide">
-                                <div class="carousel-caption">
-                                    <h3>Third slide label</h3>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <!-- Carousel controls -->
                         <a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -89,21 +84,8 @@
                 <hr>
 
                 <!-- Post Content -->
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut,
-                    error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni
-                    recusandae laborum minus inventore?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos
-                    iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat.
-                    Temporibus, voluptatibus.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis
-                    unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat
-                    perspiciatis. Enim, iure!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas
-                    placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem
-                    obcaecati?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo,
-                    aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam
-                    recusandae? Qui, necessitatibus, est!</p>
+                <p class="lead">{{$product->title}}</p>
+                <p>{{$product->desc}}</p>
 
                 <hr>
 

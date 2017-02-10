@@ -18,6 +18,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::post('/send/message', 'FrontController@sendMessage');
 Route::get('/view/product/{id}', 'ProductController@getDetail');
+Route::get('/gallery', 'FrontController@getGaleries');
 
 
 Route::group(['middleware' => 'auth'],function (){

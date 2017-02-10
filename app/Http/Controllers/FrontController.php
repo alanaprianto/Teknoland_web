@@ -32,4 +32,8 @@ class FrontController extends Controller
 
         return redirect('/#contact')->with('status', 'Pesan anda telah kami terima. Terimakasih '.$contact->name.' telah mengirimkan pesan.');
     }
+
+    public function getGaleries(){
+        return view('gallery');
+    }
 }

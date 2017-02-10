@@ -36,7 +36,7 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>Blog Post Title</h1>
+                <h1>Product Detail</h1>
 
                 <!-- Author -->
                 <p class="lead">

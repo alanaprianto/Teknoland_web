@@ -18,6 +18,7 @@ class CreateTeamsTable extends Migration
             $table->string('name')->nullable();
             $table->string('job_position')->nullable();
             $table->string('photo')->nullable();
+            $table->string('phone_number')->nullable();
             $table->longText('social_media_account')->nullable();
             $table->timestamps();
         });

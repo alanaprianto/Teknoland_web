@@ -10,6 +10,7 @@ class Team extends Model
         'name',
         'job_position',
         'photo',
-        'social_media_account'
+        'social_media_account',
+        'phone_number'
     ];
 }

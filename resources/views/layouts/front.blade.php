@@ -14,7 +14,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- PAGE LEVEL PLUGIN STYLES -->
-    <link href="{{asset('css/animate.css')}}" rel="stylesheet">
     <link href="{{asset('css/swiper.min.css')}}" rel="stylesheet" type="text/css"/>
 
     <!-- THEME STYLES -->

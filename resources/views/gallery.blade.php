@@ -21,7 +21,7 @@
 @endsection
 @section('content')
     <div class="container">
-        <h1 class="align-center">Simple Lightbox Demo Page</h1>
+
         <div class="gallery">
             <a href="images/image1.jpg" class="big"><img src="images/thumbs/thumb1.jpg" alt="" title="Beautiful Image"/></a>
             <a href="images/image2.jpg"><img src="images/thumbs/thumb2.jpg" alt="" title=""/></a>
@@ -42,9 +42,20 @@
             <div class="clear"></div>
 
         </div>
-        <br><br>
-        <p>All images are free availabled on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
-        <p>Documentation and download <a target="_blank" href="http://andreknieriem.de/simple-lightbox/">here</a></p>
+        <footer class="footer">
+            <div class="content container">
+                <div class="row">
+                    <div class="col-xs-6 ">
+                        <img class="footer-logo" src="images/logo-dark.png" alt="Aitonepage Logo">
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p class="margin-b-0"><a class="fweight-700"</a> Teknolands </a></p>
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+            <!-- End Copyright -->
+        </footer>
     </div>
 @endsection
 @section('scripts')

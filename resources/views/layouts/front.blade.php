@@ -40,7 +40,7 @@
 
                 <!-- Logo -->
                 <div class="logo">
-                    <a class="logo-wrap" href="#body">
+                    <a class="logo-wrap" href="{{ url('/') }}">
                         <img class="logo-img logo-img-main" src="{{asset('images/logo.png')}}" alt="Asentus Logo">
                         <img class="logo-img logo-img-active" src="{{asset('images/logo-dark.png')}}"
                              alt="Asentus Logo">
@@ -55,18 +55,18 @@
                     <ul class="nav navbar-nav navbar-nav-right">
 
                         <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
-                                                            href="#about">About</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#service">Service</a>
+                                                            href="{{ url('/.#about') }}">About</a></li>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#service') }}">Service</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#products">Products</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#products') }}">Products</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#events">Events</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#events') }}">Events</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#">Galery</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/gallery') }}">Galery</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#team">Team</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#team') }}">Team</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>

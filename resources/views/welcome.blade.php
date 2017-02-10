@@ -18,11 +18,11 @@
                     <div class="carousel-centered">
                         <div class="margin-b-40">
                             <h1 class="carousel-title">Teknoland Mitra Solusi</h1>
-                            <p class="color-white">Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua
+                            <p class="color-white">We are a company Solution to Information Technology
                                 <br/>
-                                enim minim estudiat veniam siad venumus dolore</p>
+                                your buisiness.</p>
                         </div>
-                        <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+
                     </div>
                 </div>
             </div>
@@ -31,12 +31,12 @@
                 <div class="container">
                     <div class="carousel-centered">
                         <div class="margin-b-40">
-                            <h2 class="carousel-title">Hi-Tech </h2>
-                            <p class="color-white">Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua
+                            <h2 class="carousel-title">Teknolands </h2>
+                            <p class="color-white">Almost always, the creative dedicated minority has made the information technology world better.
                                 <br/>
-                                enim minim estudiat veniam siad venumus dolore</p>
+                                </p>
                         </div>
-                        <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+
                     </div>
                 </div>
             </div>
@@ -53,10 +53,8 @@
                 <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
                 <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
                     <div class="margin-b-60">
-                        <h2>System Informasi Manajemen KLinik </h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret
-                            dolore
-                            magna ut consequat siad esqudiat dolor</p>
+                        <h2>Quality </h2>
+                        <p>Kami menghargai loyalitas pelanggan kami sehingga kami berusaha untuk menawarkan layanan kualitas dan keunggulan.</p>
                     </div>
                     <img class="full-width img-responsive wow fadeInUp" src="{{asset('images/500x500/01.jpg')}}"
                          alt="Portfolio Image"
@@ -68,17 +66,13 @@
                              alt="Portfolio Image"
                              data-wow-duration=".3" data-wow-delay=".3s">
                     </div>
-                    <h2>Clean Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore
-                        magna
-                        ut consequat siad esqudiat dolor</p>
+                    <h2>Komitment</h2>
+                    <p> Kami berkomitmen untuk memberikan solusi yang unik dan nilai tambah untuk operasi dan logistik perusahaan.</p>
                 </div>
                 <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
                     <div class="margin-t-60 margin-b-60">
-                        <h2>Amazing Support</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret
-                            dolore
-                            magna ut consequat siad esqudiat dolor</p>
+                        <h2>Kepercayaan</h2>
+                        <p>Teknoland komprehensif, dapat diandalkan dan berusaha untuk menginspirasi kepercayaan  dengan individu dan perusahaan yang berinteraksi</p>
                     </div>
                     <img class="full-width img-responsive wow fadeInUp" src="{{asset('images/500x500/03.jpg')}}"
                          alt="Portfolio Image"
@@ -100,9 +94,8 @@
                 <div class="row margin-b-40">
                     <div class="col-sm-6">
                         <h2>Services</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret
-                            dolore
-                            magna aliqua enim minim veniam exercitation</p>
+                        <p>Services & Solutions,Informasi offers a wide portfolio of services, quality, commitment and
+                            confidence that characterizes us. In this section you will find our offer. If you are </p>
                     </div>
                 </div>
                 <!--// end row -->
@@ -265,9 +258,7 @@
             <div class="row margin-b-40">
                 <div class="col-sm-6">
                     <h2>Events</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore
-                        magna
-                        aliqua enim minim veniam exercitation</p>
+                    <p> Almost always, the creative dedicated minority has made the information technology world better</p>
                 </div>
             </div>
             <!--// end row -->
@@ -326,7 +317,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Our Amazing Team</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p class="large text-muted" >The basic mind-set desired of people working at Teknoland Mitra Solusi, focusing on specific principles for employees to bear in mind.</p>
                 </div>
             </div>
             <div class="row">
@@ -414,8 +405,7 @@
 
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-                    laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <p class="large text-muted">Services & Solutions,Informasi offers a wide portfolio of services, quality, commitment and confidence that characterizes us. In this section you will find our offer. If you are </p>
             </div>
         </div>
         </div>
@@ -436,11 +426,11 @@
                 <!-- Contact List -->
                     <div class="col-sm-4 sm-margin-b-50">
                         <h3><a href="#">Bandung</a> <span class="text-uppercase margin-l-20">Head Office</span></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor
-                            magna ut consequat siad esqudiat dolor</p>
+                        <p>JL Cipedes Tengah No 211 Sukajadi Bandung - Jawa barat, Indonesia
+                        </p>
                         <ul class="list-unstyled contact-list">
-                            <li><i class="margin-r-10 color-base icon-call-out"></i> 1 012 3456 7890</li>
-                            <li><i class="margin-r-10 color-base icon-envelope"></i> hq@aitOnepage.com</li>
+                            <li><i class="fa fa-phone"></i> (022) 56147780</li>
+                            <li><i class="fa fa-envelope "></i> marketing@teknolands.com</li>
                         </ul>
                     </div>
                     <form method="post" action="{{url('/send/message')}}">
@@ -485,5 +475,18 @@
     </div>
     <!-- End Contact -->
     <!--========== END PAGE LAYOUT ==========-->
-
+    <footer class="footer">
+        <div class="content container">
+            <div class="row">
+                <div class="col-xs-6 ">
+                    <img class="footer-logo" src="images/logo-dark.png" alt="Aitonepage Logo">
+                </div>
+                <div class="col-xs-6 text-right">
+                    <p class="margin-b-0"><a class="fweight-700"</a> Teknolands </a></p>
+                </div>
+            </div>
+            <!--// end row -->
+        </div>
+        <!-- End Copyright -->
+    </footer>
 @endsection

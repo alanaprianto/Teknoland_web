@@ -27,29 +27,14 @@
 @section('content')
     <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
-            <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
-
-                <!-- Blog Post -->
-
-                <!-- Title -->
+            <div class="col-lg-8" possion="center">
                 <h1>Product Detail</h1>
-
-                <!-- Author -->
                 <p class="lead">
                     by <a href="#">Teknoland</a>
                 </p>
-
-                <hr>
-
-                <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Posted on {{$product->created_at}}</p>
-
                 <hr>
-
                 <div class="bs-example">
                     <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
                         <!-- Carousel indicators -->

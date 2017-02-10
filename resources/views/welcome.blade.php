@@ -470,6 +470,7 @@
                             <label for='message'>Message</label>
                             <textarea class='form-control' name='message' rows='10' required></textarea>
                         </div>
+                        {!! Recaptcha::render() !!}
                         <div class='text-right'>
                             <input type='submit' class='btn btn-primary' value='Submit'/>
                         </div>

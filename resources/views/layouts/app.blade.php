@@ -113,7 +113,7 @@
                         </a>
                     </li>
                     <li class="sub-menu">
-                        <a href="{{ url('/messenges') }}">
+                        <a href="{{ url('/messages') }}">
                             <i class="fa fa-inbox"></i>
                             <span>Messenges</span>
                         </a>

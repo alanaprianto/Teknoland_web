@@ -25,6 +25,7 @@ class FrontController extends Controller
             'email' => 'required|max:255',
             'subject' => 'required|max:255',
             'message' => 'required|max:255',
+            'g-recaptcha-response' => 'required|recaptcha',
         ]);
         $input = $request->except('_token');
         $contact = Contact::create($input);

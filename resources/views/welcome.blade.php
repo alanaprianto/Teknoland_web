@@ -434,7 +434,8 @@
         <div class="content-lg container">
             <div class="row">
                 @if (session('status'))
-                    <div class="alert alert-success">
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         {{ session('status') }}
                     </div>
             @endif
@@ -464,13 +465,15 @@
                             <label for='subject'>Subject</label>
                             <input type='text' name='subject' class='form-control' required/>
                         </div>
+                        <div class="form-group">
+                            {!! Recaptcha::render() !!}
+                        </div>
                     </div>
                     <div class='col-sm-4'>
                         <div class='form-group'>
                             <label for='message'>Message</label>
                             <textarea class='form-control' name='message' rows='10' required></textarea>
                         </div>
-                        {!! Recaptcha::render() !!}
                         <div class='text-right'>
                             <input type='submit' class='btn btn-primary' value='Submit'/>
                         </div>
@@ -570,6 +573,9 @@
 <script src="js/components/swiper.min.js" type="text/javascript"></script>
 <script src="js/components/masonry.min.js" type="text/javascript"></script>
 <script src="js/components/google-map.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+</script>
 
 </head>
 </body>

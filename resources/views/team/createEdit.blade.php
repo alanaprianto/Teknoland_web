@@ -50,6 +50,20 @@
                                         @endif
                                     </div>
                                 </div>
+                                <div class="form-group{{ $errors->has('phone_number') ? ' has-error' : '' }}">
+                                    <label for="phone_number" class="col-md-4 control-label">Nomor Telepon</label>
+
+                                    <div class="col-md-6">
+                                        <input id="phone_number" type="text" class="form-control" name="phone_number"
+                                               value="{{ $team ? $team->phone_number : old('phone_number') }}" required>
+
+                                        @if ($errors->has('phone_number'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('phone_number') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
                                 <div class="form-group{{ $errors->has('social_media') ? ' has-error' : '' }}">
                                     <label for="social_media" class="col-md-4 control-label">Sosial Media</label>
 

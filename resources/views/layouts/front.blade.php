@@ -61,6 +61,10 @@
                         </li>
                         <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#products">Products</a>
                         </li>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#events">Events</a>
+                        </li>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#">Galery</a>
+                        </li>
                         <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#team">Team</a>
                         </li>
                         <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a>
@@ -78,23 +82,6 @@
 @yield('content')
 
 
-<!--========== FOOTER ==========-->
-<footer class="footer">
-
-    <div class="content container">
-        <div class="row">
-            <div class="col-xs-6">
-                <img class="footer-logo" src="{{asset('images/logo-dark.png')}}" alt="teknoland">
-            </div>
-            <div class="col-xs-6 text-right">
-                <p class="margin-b-0"><a>Tecknoland</a>
-            </div>
-        </div>
-        <!--// end row -->
-    </div>
-    <!-- End Copyright -->
-</footer>
-<!--========== END FOOTER ==========-->
 
 <!-- Back To Top -->
 <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>

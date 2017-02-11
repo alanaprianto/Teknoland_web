@@ -105,9 +105,6 @@
                         @if($loop->index != 1)
                             <div class="col-sm-4 sm-margin-b-2">
                                 <div class="service " data-height="height">
-                                    <div class="service-element">
-                                        <i class="service-icon icon-chemistry"></i>
-                                    </div>
                                     <div class="service-info">
                                         <h3>{{$service->title}}</h3>
                                         <p class="margin-b-5">{{$service->desc}}</p>
@@ -118,9 +115,7 @@
                         @else
                             <div class="col-sm-4 sm-margin-b-2">
                                 <div class="service" data-height="height">
-                                    <div class="service-element">
-                                        <i class="service-icon icon-screen-tablet"></i>
-                                    </div>
+
                                     <div class="service-info">
                                         <h3 class="color-white">{{$service->title}}</h3>
                                         <p class="color-white margin-b-5">{{$service->desc}}</p>
@@ -132,9 +127,7 @@
                     @empty
                         <div class="col-sm-4 sm-margin-b-2">
                             <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-chemistry"></i>
-                                </div>
+
                                 <div class="service-info">
                                     <h3>Art Of Coding</h3>
                                     <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat
@@ -145,9 +138,7 @@
                         </div>
                         <div class="col-sm-4 sm-margin-b-2">
                             <div class="service bg-color-base" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-screen-tablet"></i>
-                                </div>
+
                                 <div class="service-info">
                                     <h3 class="color-white">Responsive Design</h3>
                                     <p class="color-white margin-b-5">Lorem ipsum dolor amet consectetur ut consequat
@@ -159,9 +150,7 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="service" data-height="height">
-                                <div class="service-element">
-                                    <i class="service-icon icon-badge"></i>
-                                </div>
+
                                 <div class="service-info">
                                     <h3>Feature Reach</h3>
                                     <p class="margin-b-5">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat

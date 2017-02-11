@@ -34,16 +34,16 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="menu-container js_nav-item">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Teknoland</span>
                     <span class="toggle-icon"></span>
                 </button>
 
                 <!-- Logo -->
                 <div class="logo">
                     <a class="logo-wrap" href="{{ url('/') }}">
-                        <img class="logo-img logo-img-main" src="{{asset('images/logo.png')}}" alt="Asentus Logo">
+                        <img class="logo-img logo-img-main" src="{{asset('images/logo.png')}}" alt="Teknoland logo">
                         <img class="logo-img logo-img-active" src="{{asset('images/logo-dark.png')}}"
-                             alt="Asentus Logo">
+                             alt="Teknoland logo">
                     </a>
                 </div>
                 <!-- End Logo -->

@@ -20,7 +20,7 @@
     <link href='{{asset('css/gallery.css')}}' rel='stylesheet' type='text/css'>
 @endsection
 @section('content')
-    <div class="container">
+    <div class="container"  style=" Margin-top: 100px;">
 
         <div class="gallery">
             @foreach($files as $file)

@@ -27,8 +27,8 @@
 @section('content')
     
     <!-- Page Content -->
-    <div class="container">
-        <div class="row">
+    <div class="container"  style=" Margin-top: 100px;">
+                <div class="row">
             <div class="col-lg-8" possion="center">
                 <h1>Product Detail</h1>
                 <p class="lead">

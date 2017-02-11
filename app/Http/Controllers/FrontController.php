@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Attachment;
 use App\Contact;
 use App\Product;
 use App\Service;
@@ -34,6 +35,7 @@ class FrontController extends Controller
     }
 
     public function getGaleries(){
-        return view('gallery');
+        $files = Attachment::with('event')->whereNotNull('event_id')->get();
+        return view('gallery', compact('files'));
     }
 }

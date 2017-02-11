@@ -37,8 +37,7 @@
                                     <label for="desc" class="col-md-4 control-label">Description</label>
 
                                     <div class="col-md-6">
-                                    <textarea id="desc" class="form-control" name="desc"
-                                              required>{{$event ?  $event->desc : ''}}</textarea>
+                                        <textarea class="form-control" name="desc"></textarea>
 
                                         @if ($errors->has('desc'))
                                             <span class="help-block">

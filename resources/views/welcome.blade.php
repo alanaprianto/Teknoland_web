@@ -105,30 +105,32 @@
                 <!--// end row -->
 
                 <div class="row row-space-1 margin-b-2">
-                    @forelse($services as $service)
-                        @if($loop->index != 1)
-                            <div class="col-sm-4 sm-margin-b-2">
-                                <div class="service " data-height="height">
-                                    <div class="service-info">
-                                        <h3>{{$service->title}}</h3>
-                                        <p class="margin-b-5">{{$service->desc}}</p>
+                    @if($services)
+                        @foreach($services as $index => $service)
+                            @if($index != 1)
+                                <div class="col-sm-4 sm-margin-b-2">
+                                    <div class="service " data-height="height">
+                                        <div class="service-info">
+                                            <h3>{{$service->title}}</h3>
+                                            <p class="margin-b-5">{{$service->desc}}</p>
+                                        </div>
+                                        <a href="#" class="content-wrapper-link"></a>
                                     </div>
-                                    <a href="#" class="content-wrapper-link"></a>
                                 </div>
-                            </div>
-                        @else
-                            <div class="col-sm-4 sm-margin-b-2">
-                                <div class="service" data-height="height">
+                            @else
+                                <div class="col-sm-4 sm-margin-b-2">
+                                    <div class="service" data-height="height">
 
-                                    <div class="service-info">
-                                        <h3 class="color-white">{{$service->title}}</h3>
-                                        <p class="color-white margin-b-5">{{$service->desc}}</p>
+                                        <div class="service-info">
+                                            <h3 class="color-white">{{$service->title}}</h3>
+                                            <p class="color-white margin-b-5">{{$service->desc}}</p>
+                                        </div>
+                                        <a href="#" class="content-wrapper-link"></a>
                                     </div>
-                                    <a href="#" class="content-wrapper-link"></a>
                                 </div>
-                            </div>
-                        @endif
-                    @empty
+                            @endif
+                        @endforeach
+                    @else
                         <div class="col-sm-4 sm-margin-b-2">
                             <div class="service" data-height="height">
 
@@ -163,7 +165,7 @@
                                 <a href="#" class="content-wrapper-link"></a>
                             </div>
                         </div>
-                    @endforelse
+                    @endif
                 </div>
             </div>
         </div>
@@ -184,19 +186,21 @@
             <!--// end row -->
 
             <div class="row">
-                @forelse($products as $product)
-                    @set('image', $product->attachments->first())
-                    <div class="col-sm-4 sm-margin-b-50">
-                        <div class="margin-b-20">
-                            <img class="img-responsive" src="{{asset($image->location)}}"
-                                 alt="Latest Products Image">
+                @if($products)
+                    @foreach($products as $index => $product)
+                        @set('image', $product->attachments->first())
+                        <div class="col-sm-4 sm-margin-b-50">
+                            <div class="margin-b-20">
+                                <img class="img-responsive" src="{{asset($image->location)}}"
+                                     alt="Latest Products Image">
+                            </div>
+                            <h4><a href="{{url('/view/product/'.$product->id)}}">{{$product->title}}</a> <span
+                                        class="text-uppercase margin-l-20">Rp. {{$product->price}}</span></h4>
+                            <p>{!! substr(strip_tags($product->desc), 0, 40) . '...' !!}</p>
+                            <a class="link" href="{{url('/view/product/'.$product->id)}}">Read More</a>
                         </div>
-                        <h4><a href="{{url('/view/product/'.$product->id)}}">{{$product->title}}</a> <span
-                                    class="text-uppercase margin-l-20">Rp. {{$product->price}}</span></h4>
-                        <p>{!! substr(strip_tags($product->desc), 0, 40) . '...' !!}</p>
-                        <a class="link" href="{{url('/view/product/'.$product->id)}}">Read More</a>
-                    </div>
-                @empty
+                    @endforeach
+                @else
                 <!-- Latest Products -->
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="margin-b-20">
@@ -238,7 +242,7 @@
                         <a class="link" href="#">Read More</a>
                     </div>
                     <!-- End Latest Products -->
-                @endforelse
+                @endif
             </div>
             <!--// end row -->
         </div>
@@ -258,19 +262,19 @@
             <!--// end row -->
 
             <div class="row">
-            @forelse($events as $event)
-                    @set('image', $event->attachments->first())
-                    <div class="col-sm-4 sm-margin-b-50">
-                        <div class="margin-b-20">
-                            <img class="img-responsive" src="{{$image->location}}"
-                                 alt="Latest Products Image">
+                @if($events)
+                    @foreach($events as $index => $event)
+                        <div class="col-sm-4 sm-margin-b-50">
+                            <div class="margin-b-20">
+                                <img class="img-responsive" src="{{$image->location}}"
+                                     alt="Latest Products Image">
+                            </div>
+                            <h4><a href="/view/event/{{$event->id}}">{{$event->title}}</a></h4>
+                            <p>{!! substr(strip_tags($event->desc), 0, 40) . '...' !!}</p>
+                            <a class="link" href="/view/event/{{$event->id}}">Read More</a>
                         </div>
-                        <h4><a href="/view/event/{{$event->id}}">{{$event->title}}</a></h4>
-                        <p>{!! substr(strip_tags($event->desc), 0, 40) . '...' !!}</p>
-                        <a class="link" href="/view/event/{{$event->id}}">Read More</a>
-                    </div>
-            @empty
-                <!-- Latest Products -->
+                    @endforeach
+                @else
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}"
@@ -311,7 +315,7 @@
                         <a class="link" href="#">Read More</a>
                     </div>
                     <!-- End Latest Products -->
-                @endforelse
+                @endif
             </div>
             <!--// end row -->
         </div>
@@ -329,24 +333,26 @@
                 </div>
             </div>
             <div class="row">
-                @forelse($teams as $team)
-                    @set('socials', json_decode($team->social_media_account, true))
-                    <div class="col-sm-3">
-                        <div class="team-member">
-                            <img src="{{asset($team->photo)}}" class="img-responsive img-circle" alt="">
-                            <h4>{{$team->name}}</h4>
-                            <p class="text-muted">{{$team->job_position}}</p>
-                            <ul class="list-inline social-buttons">
-                                <li><a href="{{$socials[0]}}"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li><a href="{{$socials[1]}}"><i class="fa fa-google-plus"></i></a>
-                                </li>
-                                <li><a href="{{$socials[2]}}"><i class="fa fa-twitter"></i></a>
-                                </li>
-                            </ul>
+                @if($teams)
+                    @foreach($teams as $index => $team)
+                        @set('socials', json_decode($team->social_media_account, true))
+                        <div class="col-sm-3">
+                            <div class="team-member">
+                                <img src="{{asset($team->photo)}}" class="img-responsive img-circle" alt="">
+                                <h4>{{$team->name}}</h4>
+                                <p class="text-muted">{{$team->job_position}}</p>
+                                <ul class="list-inline social-buttons">
+                                    <li><a href="{{$socials[0]}}"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="{{$socials[1]}}"><i class="fa fa-google-plus"></i></a>
+                                    </li>
+                                    <li><a href="{{$socials[2]}}"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                @empty
+                    @endforeach
+                @else
                     <div class="col-sm-3">
                         <div class="team-member">
                             <img src="images/man1-u581-fr.jpg" class="img-responsive img-circle" alt="">
@@ -407,7 +413,7 @@
                             </ul>
                         </div>
                     </div>
-                @endforelse
+                @endif
             </div>
         </div>
 
@@ -490,7 +496,7 @@
             <div class="row">
                 <div class="col-xs-6 ">
                     <img class="footer-logo" src="images/logo-dark.png" alt="Aitonepage Logo">
-               </div>
+                </div>
                 <div class="col-xs-6 text-right">
                     <p class="margin-b-0"><a class="fweight-700" href="{{ url('/login') }}"> Login </a></p>
                 </div>

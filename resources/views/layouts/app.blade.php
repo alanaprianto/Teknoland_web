@@ -11,13 +11,12 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
     <!--external css-->
-    <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/jquery.gritter.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/style1.css')}}">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/style-responsive.css')}}" rel="stylesheet">
-    <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{asset('css/dataTables.bootstrap.css')}}" rel="stylesheet">
     <link href="{{asset('/css/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
     @yield('css')
 </head>
@@ -39,27 +38,13 @@
             <ul class="nav pull-right top-menu">
                 @if (Auth::guest())
                     {{--<li><a class="logout" href="{{ route('login') }}">login</a></li>--}}
-                    {{--<li><a class="logout" href="{{ route('register') }}">register</a></li>--}}
+
                 @else
                     <li class="dropdown">
-                        <a href="#" class="logout" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                        <a href="#" class="logout" id="logout" data-toggle="dropdown" role="button"
+                           aria-expanded="false">
+                            Logout
                         </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a class="logout" href="{{ route('logout') }}"
-                                <a class="logout" href="{{ route('logout') }}"
-                                   onclick="t.prtDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                      style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
                     </li>
                 @endif
             </ul>
@@ -120,7 +105,6 @@
     </aside>
 
     @yield('content')
-
     <script src="{{ asset('js/jquery-2.2.4.js')}}"></script>
     <script src="{{ asset('js/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('js/dataTables.bootstrap.js') }}"></script>
@@ -132,6 +116,26 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <script src="{{'/js/tinymce/tinymce.min.js'}}"></script>
     <script src="{{'/js/tinymce/jquery.tinymce.min.js'}}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $(document).on('click', '#logout', function () {
+               var $form = $('<form />');
+               $form.attr('action', '/logout');
+               $form.attr('method', 'post');
+               $form.css({
+                   'display': 'none'
+               });
+               //csrf
+               var csrf = $('<input />');
+               csrf.attr('type', 'hidden');
+               csrf.attr('name', '_token');
+               csrf.val($('meta[name="csrf-token"]').attr('content'));
+               $form.append(csrf);
+               $('body').append($form);
+               $form.submit();
+           });
+        });
+    </script>
     @yield('scripts')
 </section>
 </body>

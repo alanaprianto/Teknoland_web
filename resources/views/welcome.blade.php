@@ -469,10 +469,11 @@
             <div class="row">
                 <div class="col-xs-6 ">
                     <img class="footer-logo" src="images/logo-dark.png" alt="Aitonepage Logo">
-                </div>
+               </div>
                 <div class="col-xs-6 text-right">
-                    <p class="margin-b-0"><a class="fweight-700"</a> Teknolands </a></p>
+                    <p class="margin-b-0"><a class="fweight-700" href="{{ url('/login') }}"> Login </a></p>
                 </div>
+
             </div>
             <!--// end row -->
         </div>

@@ -55,18 +55,18 @@
                     <ul class="nav navbar-nav navbar-nav-right">
 
                         <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
-                                                            href="{{ url('/.#about') }}">About</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#service') }}">Service</a>
+                                                            href="{{ url('/#about') }}">About</a></li>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{url('/#service')}}">Service</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#products') }}">Products</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{url('/#products')}}">Products</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#events') }}">Events</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{url('/#events')}}">Events</a>
                         </li>
                         <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/gallery') }}">Galery</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#team') }}">Team</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{url('/#team')}}">Team</a>
                         </li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{ url('/.#contact') }}">Contact</a>
+                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="{{url('/#contact')}}">Contact</a>
                         </li>
                     </ul>
                 </div>

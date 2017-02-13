@@ -562,6 +562,7 @@ fieldset[disabled] .btn-theme {
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+  background: #fff;
 }
 
 /* Navbar Toggle */
@@ -713,7 +714,7 @@ fieldset[disabled] .btn-theme {
   font-size: 13px;
   font-weight: 600;
   font-family: Hind, sans-serif;
-  color: #fff;
+  color:#101010;
   text-transform: uppercase;
   line-height: 55px;
   padding: 20px;

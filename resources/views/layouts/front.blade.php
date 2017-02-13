@@ -17,7 +17,7 @@
     <link href="{{asset('css/swiper.min.css')}}" rel="stylesheet" type="text/css"/>
 
     <!-- THEME STYLES -->
-    <link href="{{asset('css/layout.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/layout.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/agency.min.css')}}" rel="stylesheet" type="text/css"/>
 
     <!-- Favicon -->

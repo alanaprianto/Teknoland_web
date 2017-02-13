@@ -47,7 +47,7 @@
                             <div class="clear"></div>--}}
 
         </div>
-        <footer class="footer">
+        <footer class="footer" style=" Margin-top: 10px;">
             <div class="content container">
                 <div class="row">
                     <div class="col-xs-6 ">

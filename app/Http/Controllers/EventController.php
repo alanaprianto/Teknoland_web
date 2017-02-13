@@ -81,4 +81,10 @@ class EventController extends Controller
 
         return redirect()->back()->with('status', 'Berhasil menghapus event');
     }
+
+    public function getDetail($id){
+        $event = Event::with(['attachments'])->find($id);
+
+        return view('event.detailFront', compact('event'));
+    }
 }

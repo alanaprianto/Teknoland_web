@@ -32,9 +32,10 @@
                     <div class="carousel-centered">
                         <div class="margin-b-40">
                             <h2 class="carousel-title">Teknolands </h2>
-                            <p class="color-white">Almost always, the creative dedicated minority has made the information technology world better.
+                            <p class="color-white">Almost always, the creative dedicated minority has made the
+                                information technology world better.
                                 <br/>
-                                </p>
+                            </p>
                         </div>
 
                     </div>
@@ -54,7 +55,8 @@
                 <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 sm-margin-b-30">
                     <div class="margin-b-60">
                         <h2>Quality </h2>
-                        <p>Kami menghargai loyalitas pelanggan kami sehingga kami berusaha untuk menawarkan layanan kualitas dan keunggulan.</p>
+                        <p>Kami menghargai loyalitas pelanggan kami sehingga kami berusaha untuk menawarkan layanan
+                            kualitas dan keunggulan.</p>
                     </div>
                     <img class="full-width img-responsive wow fadeInUp" src="{{asset('images/500x500/01.jpg')}}"
                          alt="Portfolio Image"
@@ -67,12 +69,14 @@
                              data-wow-duration=".3" data-wow-delay=".3s">
                     </div>
                     <h2>Komitment</h2>
-                    <p> Kami berkomitmen untuk memberikan solusi yang unik dan nilai tambah untuk operasi dan logistik perusahaan.</p>
+                    <p> Kami berkomitmen untuk memberikan solusi yang unik dan nilai tambah untuk operasi dan logistik
+                        perusahaan.</p>
                 </div>
                 <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
                     <div class="margin-t-60 margin-b-60">
                         <h2>Kepercayaan</h2>
-                        <p>Teknoland komprehensif, dapat diandalkan dan berusaha untuk menginspirasi kepercayaan  dengan individu dan perusahaan yang berinteraksi</p>
+                        <p>Teknoland komprehensif, dapat diandalkan dan berusaha untuk menginspirasi kepercayaan dengan
+                            individu dan perusahaan yang berinteraksi</p>
                     </div>
                     <img class="full-width img-responsive wow fadeInUp" src="{{asset('images/500x500/03.jpg')}}"
                          alt="Portfolio Image"
@@ -187,9 +191,9 @@
                             <img class="img-responsive" src="{{asset($image->location)}}"
                                  alt="Latest Products Image">
                         </div>
-                        <h4><a href="#">{{$product->title}}</a> <span
+                        <h4><a href="{{url('/view/product/'.$product->id)}}">{{$product->title}}</a> <span
                                     class="text-uppercase margin-l-20">Rp. {{$product->price}}</span></h4>
-                        <p>{{$product->desc}}</p>
+                        <p>{!! substr(strip_tags($product->desc), 0, 40) . '...' !!}</p>
                         <a class="link" href="{{url('/view/product/'.$product->id)}}">Read More</a>
                     </div>
                 @empty
@@ -247,13 +251,26 @@
             <div class="row margin-b-40">
                 <div class="col-sm-6">
                     <h2>Events</h2>
-                    <p> Almost always, the creative dedicated minority has made the information technology world better</p>
+                    <p> Almost always, the creative dedicated minority has made the information technology world
+                        better</p>
                 </div>
             </div>
             <!--// end row -->
 
             <div class="row">
-                      <!-- Latest Products -->
+            @forelse($events as $event)
+                    @set('image', $event->attachments->first())
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive" src="{{$image->location}}"
+                                 alt="Latest Products Image">
+                        </div>
+                        <h4><a href="/view/event/{{$event->id}}">{{$event->title}}</a></h4>
+                        <p>{!! substr(strip_tags($event->desc), 0, 40) . '...' !!}</p>
+                        <a class="link" href="/view/event/{{$event->id}}">Read More</a>
+                    </div>
+            @empty
+                <!-- Latest Products -->
                     <div class="col-sm-4 sm-margin-b-50">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="{{asset('images/970x647/01.jpg')}}"
@@ -294,6 +311,7 @@
                         <a class="link" href="#">Read More</a>
                     </div>
                     <!-- End Latest Products -->
+                @endforelse
             </div>
             <!--// end row -->
         </div>
@@ -306,7 +324,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Our Amazing Team</h1>
-                    <p class="large text-muted" >The basic mind-set desired of people working at Teknoland Mitra Solusi, focusing on specific principles for employees to bear in mind.</p>
+                    <p class="large text-muted">The basic mind-set desired of people working at Teknoland Mitra Solusi,
+                        focusing on specific principles for employees to bear in mind.</p>
                 </div>
             </div>
             <div class="row">
@@ -394,7 +413,9 @@
 
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p class="large text-muted">Services & Solutions,Informasi offers a wide portfolio of services, quality, commitment and confidence that characterizes us. In this section you will find our offer. If you are </p>
+                <p class="large text-muted">Services & Solutions,Informasi offers a wide portfolio of services, quality,
+                    commitment and confidence that characterizes us. In this section you will find our offer. If you
+                    are </p>
             </div>
         </div>
         </div>

@@ -30,11 +30,11 @@
     <div class="container"  style=" Margin-top: 100px;">
                 <div class="row">
             <div class="col-lg-8" possion="center">
-                <h1>Product Detail</h1>
+                <h1>Event Detail</h1>
                 <p class="lead">
                     by <a href="#">Teknoland</a>
                 </p>
-                <p><span class="glyphicon glyphicon-time"></span> Rp. {{$product->price}}</p>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on {{$event->created_at}}</p>
                 <hr>
                 <div class="bs-example">
                     <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
@@ -46,7 +46,7 @@
                         </ol>
                         <!-- Wrapper for carousel items -->
                         <div class="carousel-inner">
-                            @foreach($product->attachments as $attachment)
+                            @foreach($event->attachments as $attachment)
                                 <div class="@if($loop->index == 0) active @endif item">
 
                                     <img src="/{{$attachment->location}}" alt="First Slide">
@@ -70,8 +70,8 @@
                 <hr>
 
                 <!-- Post Content -->
-                <p class="lead">{{$product->title}}</p>
-                <p>{!! $product->desc !!}</p>
+                <p class="lead">{{$event->title}}</p>
+                <p>{!! $event->desc !!}</p>
 
                 <hr>
 

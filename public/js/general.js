@@ -47,7 +47,6 @@
                     }
                 },
                 {data: 'price', name: 'price'},
-                {data: 'desc', name: 'desc'},
                 {
                     data: 'created_at', name: 'created_at', "render": function (data, type, full, meta) {
                     return moment(data).format('LLL')
@@ -155,7 +154,6 @@
                     "searchable": false
                 },
                 {data: 'title', name: 'title'},
-                {data: 'desc', name: 'desc'},
                 {
                     data: 'created_at', name: 'created_at', "render": function (data, type, full, meta) {
                     return moment(data).format('LLL')

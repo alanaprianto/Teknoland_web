@@ -41,7 +41,6 @@
                             <tr>
                                 <th>No</th>
                                 <th>Judul</th>
-                                <th>Desc</th>
                                 <th>Tanggal Dibuat</th>
                                 <th>Action</th>
                             </tr>

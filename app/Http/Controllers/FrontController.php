@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Attachment;
 use App\Contact;
+use App\Event;
 use App\Product;
 use App\Service;
 use App\Team;
@@ -14,10 +15,10 @@ class FrontController extends Controller
     public function getWelcome(){
         $teams = Team::inRandomOrder()->take(4)->get();
         $products = Product::with(['attachments'])->inRandomOrder()->take(3)->get();
-
         $services = Service::inRandomOrder()->take(3)->get();
+        $events = Event::with(['attachments'])->inRandomOrder()->take(3)->get();
 
-        return view('welcome', compact(['teams', 'products', 'services']));
+        return view('welcome', compact(['teams', 'products', 'services', 'events']));
     }
 
     public function sendMessage(Request $request){

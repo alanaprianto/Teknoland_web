@@ -39,7 +39,7 @@
             <ul class="nav pull-right top-menu">
                 @if (Auth::guest())
                     <li><a class="logout" href="{{ route('login') }}">login</a></li>
-                    <li><a class="logout" href="{{ route('register') }}">register</a></li>
+                    {{--<li><a class="logout" href="{{ route('register') }}">register</a></li>--}}
                 @else
                     <li class="dropdown">
                         <a href="#" class="logout" data-toggle="dropdown" role="button" aria-expanded="false">

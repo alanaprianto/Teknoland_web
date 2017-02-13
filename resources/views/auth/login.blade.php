@@ -52,12 +52,12 @@
                  </span>
                     </label>
                     <button class="btn btn-theme btn-block" type="submit" class="btn btn-primary"> SIGN IN</button>
-                    <div class="registration">
-                        Don't have an account yet?<br/>
-                        <a class="" href="{{ route('register') }}">
-                            Create an account
-                        </a>
-                    </div>
+                    {{--<div class="registration">--}}
+                        {{--Don't have an account yet?<br/>--}}
+                        {{--<a class="" href="{{ route('register') }}">--}}
+                            {{--Create an account--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
             </form>
         </div>
     </div>

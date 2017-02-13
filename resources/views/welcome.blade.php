@@ -105,32 +105,17 @@
                 <!--// end row -->
 
                 <div class="row row-space-1 margin-b-2">
-                    @if($services)
-                        @foreach($services as $index => $service)
-                            @if($index != 1)
-                                <div class="col-sm-4 sm-margin-b-2">
-                                    <div class="service " data-height="height">
-                                        <div class="service-info">
-                                            <h3>{{$service->title}}</h3>
-                                            <p class="margin-b-5">{{$service->desc}}</p>
-                                        </div>
-                                        <a href="#" class="content-wrapper-link"></a>
-                                    </div>
+                    @forelse($services as $index => $service)
+                        <div class="col-sm-4 sm-margin-b-2">
+                            <div class="service " data-height="height">
+                                <div class="service-info">
+                                    <h3>{{$service->title}}</h3>
+                                    <p class="margin-b-5">{{$service->desc}}</p>
                                 </div>
-                            @else
-                                <div class="col-sm-4 sm-margin-b-2">
-                                    <div class="service" data-height="height">
-
-                                        <div class="service-info">
-                                            <h3 class="color-white">{{$service->title}}</h3>
-                                            <p class="color-white margin-b-5">{{$service->desc}}</p>
-                                        </div>
-                                        <a href="#" class="content-wrapper-link"></a>
-                                    </div>
-                                </div>
-                            @endif
-                        @endforeach
-                    @else
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    @empty
                         <div class="col-sm-4 sm-margin-b-2">
                             <div class="service" data-height="height">
 
@@ -165,7 +150,8 @@
                                 <a href="#" class="content-wrapper-link"></a>
                             </div>
                         </div>
-                    @endif
+                    @endforelse
+
                 </div>
             </div>
         </div>

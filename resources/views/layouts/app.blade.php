@@ -40,23 +40,10 @@
                     <li><a class="logout" href="{{ route('login') }}">login</a></li>
                 @else
                     <li class="dropdown">
-                        <a href="#" class="logout" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                        <a href="#" class="logout" id="logout" data-toggle="dropdown" role="button"
+                           aria-expanded="false">
+                            Logout
                         </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a class="logout" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                      style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
                     </li>
                 @endif
             </ul>
@@ -129,6 +116,26 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <script src="{{'/js/tinymce/tinymce.min.js'}}"></script>
     <script src="{{'/js/tinymce/jquery.tinymce.min.js'}}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+           $(document).on('click', '#logout', function () {
+               var $form = $('<form />');
+               $form.attr('action', '/logout');
+               $form.attr('method', 'post');
+               $form.css({
+                   'display': 'none'
+               });
+               //csrf
+               var csrf = $('<input />');
+               csrf.attr('type', 'hidden');
+               csrf.attr('name', '_token');
+               csrf.val($('meta[name="csrf-token"]').attr('content'));
+               $form.append(csrf);
+               $('body').append($form);
+               $form.submit();
+           });
+        });
+    </script>
     @yield('scripts')
 </section>
 </body>

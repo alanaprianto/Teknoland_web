@@ -20,7 +20,7 @@
 @endsection
 @section('content')
     <!-- Page Content -->
-    <div class="container">
+    <div class="container style=" Margin-top: 100px; margin-left: 250px; margin-right: 300px; position: static;">
 
         <div class="row">
 
@@ -31,12 +31,6 @@
 
                 <!-- Title -->
                 <h1>Event Detail </h1>
-
-                <!-- Author -->
-                <p class="lead">
-                    by <a href="#">Teknoland</a>
-                </p>
-
                 <hr>
 
                 <!-- Date/Time -->

@@ -27,13 +27,10 @@
 @section('content')
     
     <!-- Page Content -->
-    <div class="container"  style=" Margin-top: 100px;">
+    <div class="container"  style=" Margin-top: 100px; margin-left: 250px; margin-right: 300px; position: static;">
                 <div class="row">
             <div class="col-lg-8" possion="center">
                 <h1>Event Detail</h1>
-                <p class="lead">
-                    by <a href="#">Teknoland</a>
-                </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on {{$event->created_at}}</p>
                 <hr>
                 <div class="bs-example">

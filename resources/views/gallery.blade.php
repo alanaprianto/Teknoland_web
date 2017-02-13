@@ -45,9 +45,8 @@
                             <a href="images/image12.jpg"><img src="images/thumbs/thumb12.jpg" alt="" title=""/></a>
 
                             <div class="clear"></div>--}}
-
         </div>
-        <footer class="footer" style=" Margin-top: 10px;">
+        <footer class="footer" style=" Margin-top: 100px;">
             <div class="content container">
                 <div class="row">
                     <div class="col-xs-6 ">

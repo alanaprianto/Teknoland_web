@@ -38,8 +38,8 @@
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
                 @if (Auth::guest())
-                    <li><a class="logout" href="{{ route('login') }}">login</a></li>
-                    <li><a class="logout" href="{{ route('register') }}">register</a></li>
+                    {{--<li><a class="logout" href="{{ route('login') }}">login</a></li>--}}
+                    {{--<li><a class="logout" href="{{ route('register') }}">register</a></li>--}}
                 @else
                     <li class="dropdown">
                         <a href="#" class="logout" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -49,7 +49,7 @@
                             <li>
                                 <a class="logout" href="{{ route('logout') }}"
                                 <a class="logout" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
+                                   onclick="t.prtDefault();
                                                      document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
@@ -77,12 +77,12 @@
                                                                     class="img-circle" width="60"></a></p>
                     <h5 class="centered">{{ Auth::user()->name }}</h5>
 
-                    <li class="mt">
-                        <a href="{{ url('home') }}">
-                            <i class="fa fa-dashboard"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
+                    {{--<li class="mt">--}}
+                        {{--<a href="{{ url('home') }}">--}}
+                            {{--<i class="fa fa-dashboard"></i>--}}
+                            {{--<span>Dashboard</span>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
 
                     <li class="sub-menu">
                         <a href="{{ url('/products') }}">
@@ -102,7 +102,6 @@
                             <span>Events</span>
                         </a>
                     </li>
-                    <li class="sub-menu">
                         <a href="{{ url('/services') }}">
                             <i class="fa fa-cogs"></i>
                             <span>Services</span>

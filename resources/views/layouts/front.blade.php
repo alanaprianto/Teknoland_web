@@ -41,8 +41,8 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a class="logo-wrap" href="{{ url('/') }}">
-                        <img class="logo-img logo-img-main" src="{{asset('images/logo.png')}}" alt="Teknoland logo">
-                        <img class="logo-img logo-img-active" src="{{asset('images/logo-dark.png')}}"
+                        <img class="logo-img logo-img-main" src="{{asset('images/logo2.png')}}" alt="Teknoland logo">
+                        <img class="logo-img logo-img-active" src="{{asset('images/logo2.png')}}"
                              alt="Teknoland logo">
                     </a>
                 </div>

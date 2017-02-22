@@ -13,7 +13,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="img-responsive" src="{{asset('images/03.jpg')}}" alt="Slider Image">
+                <img class="img-responsive" src="{{asset('images/01.jpg')}}" alt="Slider Image">
                 <div class="container">
                     <div class="carousel-centered">
                         <div class="margin-b-40">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="img-responsive" src="{{asset('images/02.jpg')}}" alt="Slider Image">
+                <img class="img-responsive" src="{{asset('images/04.jpg')}}" alt="Slider Image">
                 <div class="container">
                     <div class="carousel-centered">
                         <div class="margin-b-40">

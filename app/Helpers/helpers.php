@@ -7,10 +7,9 @@ function getFileName($file){
 
 function getJobPosition(){
     return [
-        'CEO',
-        'CMO',
-        'CTO',
-        'COO',
-        'CFO'
+        'Co-Founder',
+        'Project Manager',
+        'Senior Programer',
+
     ];
 }

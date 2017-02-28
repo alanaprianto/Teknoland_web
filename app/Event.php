@@ -10,6 +10,7 @@ class Event extends Model
         'title',
         'desc',
         'date',
+        'type',
     ];
 
     public function attachments(){

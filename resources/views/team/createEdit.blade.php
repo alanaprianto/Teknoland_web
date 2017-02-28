@@ -64,6 +64,20 @@
                                         @endif
                                     </div>
                                 </div>
+                                <div class="form-group{{ $errors->has('desc') ? ' has-error' : '' }}">
+                                    <label for="phone_number" class="col-md-4 control-label">Quotes </label>
+
+                                    <div class="col-md-6">
+                                        <input id="phone_number" type="text" class="form-control" name="desc"
+                                               value="{{ $team ? $team->desc : old('desc') }}" required>
+
+                                        @if ($errors->has('desc'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('desc') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
                                 <div class="form-group{{ $errors->has('social_media') ? ' has-error' : '' }}">
                                     <label for="social_media" class="col-md-4 control-label">Sosial Media</label>
 

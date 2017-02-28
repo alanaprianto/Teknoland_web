@@ -14,9 +14,9 @@ class FrontController extends Controller
 {
     public function getWelcome(){
         $teams = Team::inRandomOrder()->take(4)->get();
-        $products = Product::with(['attachments'])->inRandomOrder()->take(3)->get();
-        $services = Service::inRandomOrder()->take(3)->get();
-        $events = Event::with(['attachments'])->inRandomOrder()->take(3)->get();
+        $products = Product::with(['attachments'])->inRandomOrder()->take(6)->get();
+        $services = Service::inRandomOrder()->take(6)->get();
+        $events = Event::with(['attachments'])->inRandomOrder()->take(8)->get();
 
         return view('welcome', compact(['teams', 'products', 'services', 'events']));
     }

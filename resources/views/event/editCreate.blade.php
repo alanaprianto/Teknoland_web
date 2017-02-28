@@ -47,6 +47,27 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
+                                    <label for="type" class="col-md-4 control-label">Type</label>
+
+                                    <div class="col-md-6">
+
+                                        <select class="form-control" name="type">
+                                            <option value="creative">Creative</option>
+                                            <option value="corporate">Corporate</option>
+                                            <option value="portfolio">Portofolio</option>
+
+                                        </select>
+
+                                        @if ($errors->has('type'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+
                                 <div class="form-group{{ $errors->has('file') ? ' has-error' : '' }}">
                                     <label for="file" class="col-md-4 control-label">Foto / Gambar</label>
 

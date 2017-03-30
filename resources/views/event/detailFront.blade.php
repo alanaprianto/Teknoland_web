@@ -1,13 +1,5 @@
 @extends('layouts.front')
 @section('css')
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
     <style type="text/css">
         .carousel {
             background: #2f4357;
@@ -25,11 +17,11 @@
 
 @endsection
 @section('content')
-    
+
     <!-- Page Content -->
-    <div class="container"  style=" Margin-top: 100px; margin-left: 250px; margin-right: 300px; position: static;">
-                <div class="row">
-            <div class="col-lg-8" possion="center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-offset-2">
                 <h1>Event Detail</h1>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on {{$event->created_at}}</p>
                 <hr>
@@ -73,15 +65,7 @@
                 <hr>
 
             </div>
-            <!-- /.row -->
-            <!--========== FOOTER ==========-->
         </div>
         <!-- /.container -->
-
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
     </div>
 @endsection

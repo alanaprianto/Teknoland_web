@@ -26,14 +26,14 @@
     <script type="text/javascript" href="{{asset('/js/general.js')}}"></script>
     <section id="main-content">
         <section class="wrapper">
-            <h3><i class="fa fa-angle-right"></i> Product</h3>
+            <h3><i class="fa fa-angle-right"></i> Portofolio</h3>
 
             <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
                 <div class="col-lg-12">
                     <div class="form-panel">
                         <div class="action" style="margin-bottom: 10px">
-                            <a href="{{url('/event/create')}}" type="button" class="btn btn-primary">Tambah product</a>
+                            <a href="{{url('/event/create')}}" type="button" class="btn btn-primary">Tambah Portofolio</a>
                         </div>
 
                         <table class="table table-stripped" id="table-event" data-token="{{csrf_token()}}">

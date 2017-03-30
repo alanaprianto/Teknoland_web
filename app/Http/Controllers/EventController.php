@@ -87,4 +87,9 @@ class EventController extends Controller
 
         return view('event.detailFront', compact('event'));
     }
+
+    public function getFrontList(){
+        $events = Event::with('attachments')->paginate(5);
+        return view('event.frontList', compact('events'));
+    }
 }

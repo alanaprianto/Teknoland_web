@@ -20,6 +20,8 @@ Route::post('/send/message', 'FrontController@sendMessage');
 Route::get('/view/product/{id}', 'ProductController@getDetail');
 Route::get('/view/event/{id}', 'EventController@getDetail');
 Route::get('/gallery', 'FrontController@getGaleries');
+Route::get('/view/events', 'EventController@getFrontList');
+Route::get('/view/products', 'ProductController@getFrontList');
 
 
 Route::group(['middleware' => 'auth'],function (){

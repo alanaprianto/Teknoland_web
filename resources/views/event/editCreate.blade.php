@@ -4,7 +4,8 @@
     <script type="text/javascript" href="{{asset('/js/general.js')}}"></script>
     <section id="main-content">
         <section class="wrapper">
-            <h3><i class="fa fa-angle-right"></i> Product <i class="fa fa-angle-right"></i> {{$event ? "Edit" : "Create"}}</h3>
+            <h3><i class="fa fa-angle-right"></i> Portofolio <i
+                        class="fa fa-angle-right"></i> {{$event ? "Edit" : "Create"}}</h3>
 
             <!-- BASIC FORM ELELEMNTS -->
             <div class="row mt">
@@ -37,7 +38,8 @@
                                     <label for="desc" class="col-md-4 control-label">Description</label>
 
                                     <div class="col-md-6">
-                                        <textarea class="form-control" name="desc">{{$event ? $event->desc:''}}</textarea>
+                                        <textarea class="form-control"
+                                                  name="desc">{{$event ? $event->desc:''}}</textarea>
 
                                         @if ($errors->has('desc'))
                                             <span class="help-block">
@@ -53,12 +55,9 @@
                                     <div class="col-md-6">
 
                                         <select class="form-control" name="type">
-                                            {{$event ? $event->type :''}}
-                                            <option value="{{$event ? $event->type :''}}">{{$event ? $event->type :''}}</option>
-                                            <option value="creative">Creative</option>
-                                            <option value="corporate">Corporate</option>
-                                            <option value="portfolio">Portofolio</option>
-
+                                            <option value="creative" {{$event && ($event->type == 'creative') ? 'selected' : '' }}>Creative</option>
+                                            <option value="corporate" {{$event && ($event->type == 'corporate') ? 'selected' : '' }}>Corporate</option>
+                                            <option value="portfolio" {{$event && ($event->type == 'portfolio') ? 'selected' : '' }}>Portofolio</option>
                                         </select>
 
                                         @if ($errors->has('type'))
@@ -130,8 +129,8 @@
             toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
             image_advtab: true,
             templates: [
-                { title: 'Test template 1', content: 'Test 1' },
-                { title: 'Test template 2', content: 'Test 2' }
+                {title: 'Test template 1', content: 'Test 1'},
+                {title: 'Test template 2', content: 'Test 2'}
             ],
             content_css: [
                 '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',

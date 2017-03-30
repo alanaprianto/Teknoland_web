@@ -1,6 +1,6 @@
 jQuery(function($) {'use strict';
 
-	// Navigation Scroll
+/*	// Navigation Scroll
 	$(window).scroll(function(event) {
 		Scroll();
 	});
@@ -28,7 +28,7 @@ jQuery(function($) {'use strict';
 				.eq(i).addClass('active');			
 			}
 		})
-	};
+	};*/
 
 	$('#tohash').on('click', function(){
 		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
@@ -150,6 +150,24 @@ jQuery(function($) {'use strict';
 			return false;
 		});
 	});
+
+    // product filter
+    $(window).load(function(){'use strict';
+        var $product_selectors = $('.product-filter >li>a');
+        var $product = $('.product-items');
+        $product.isotope({
+            itemSelector : '.product-item',
+            layoutMode : 'fitRows'
+        });
+
+        $product_selectors.on('click', function(){
+            $product_selectors.removeClass('active');
+            $(this).addClass('active');
+            var selector = $(this).attr('data-filter');
+            $product.isotope({ filter: selector });
+            return false;
+        });
+    });
 
 	$(document).ready(function() {
 		//Animated Progress

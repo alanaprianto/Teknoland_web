@@ -11,7 +11,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $admin = ['name' => 'Admin Technoland', 'email' => 'alan.aprianto@gmail.com' ,'password' => bcrypt('qwe123@@') ,'created_at' => \Carbon\Carbon::now(), 'updated_at' => \Carbon\Carbon::now()];
+        $admin = ['name' => 'Admin Technoland', 'email' => 'admin@teknolands.com' ,'password' => bcrypt('qwe123@@') ,'created_at' => \Carbon\Carbon::now(), 'updated_at' => \Carbon\Carbon::now()];
         \Illuminate\Support\Facades\DB::table('users')->insert([$admin]);
     }
 }

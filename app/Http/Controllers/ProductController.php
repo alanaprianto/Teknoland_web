@@ -103,10 +103,13 @@ class ProductController extends Controller
         return collect($response)->toJson();
     }
     public function getDetail ($id){
-
         $product = Product::with(['attachments'])->find($id);
         return view('product.detail', compact('product'));
 
+    }
 
+    public function getFrontList(){
+        $products = Product::with('attachments')->paginate(5);
+        return view('product.frontList', compact('products'));
     }
 }

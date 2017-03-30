@@ -31,7 +31,7 @@
                 <div class="row">
             <div class="col-lg-8"  >
                 <h1>Product Detail</h1>
-                <p><span class="glyphicon glyphicon-time"></span> Rp. {{$product->price}}</p>
+                {{--<p><span class="glyphicon glyphicon-time"></span> Rp. {{$product->price}}</p>--}}
                 <hr>
                 <div class="bs-example">
                     <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
@@ -79,9 +79,9 @@
         <!-- /.container -->
 
         <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+        <script src="{{asset('js/jquery.js')}}"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="{{asset('js/bootstrap.min.js')}}"></script>
     </div>
 @endsection

@@ -224,7 +224,7 @@
                         <div class="portfolio-info">
                             <h3>{{$event->title}}</h3>
                             {!! substr(strip_tags($event->desc), 0, 40) . '...' !!}
-                            <a class="preview" href="{{$event->attachments[0]->location}}" rel="prettyPhoto"><i class="fa fa-eye" style="margin-top: 10px"></i></a>
+                            <a class="preview" href="{{url('view/event/'.$event->id )}}" target="_blank" ><i class="fa fa-eye" style="margin-top: 10px"></i></a>
                         </div>
                     </div>
                 </div><!--/.portfolio-item-->
@@ -306,6 +306,44 @@
                         </div>
                     </div>
                 </div><!--/.portfolio-item-->
+                @endif
+            </div>
+        </div><!--/.container-->
+    </section><!--/#portfolio-->
+
+    <section id="product">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Our Product</h2>
+                <p class="text-center wow fadeInDown"></p>
+            </div>
+
+            <div class="text-center">
+                <ul class="product-filter">
+                    <li><a class="active" href="#" data-filter="*">All Product</a></li>
+                    <li><a href="#" data-filter=".software">Software</a></li>
+                    <li><a href="#" data-filter=".hardware">Hardware</a></li>
+                    <li><a href="#" data-filter=".intergarsi">Intergarsi Software & Hardware </a></li>
+                </ul><!--/#portfolio-filter-->
+            </div>
+            <div class="product-items">
+                @if($products)
+                    @foreach($products as $index => $product)
+
+                        <div @if ($product->type == 'software') class="product-item software product" @elseif($event->type == 'hardware') class="product-item hardware product" @elseif($event->type == 'intergarsi') class="product-item  intergarsi"  @endif>
+
+                            <div class="product-item-inner">
+                                <img class="img-responsive" src="{{$product->attachments[0]->location}}" alt="">
+                                <div class="product-info">
+                                    <h3>{{$product->title}}</h3>
+                                    {!! substr(strip_tags($product->desc), 0, 40) . '...' !!}
+                                    <a class="preview" href="{{url('view/product/'.$product->id )}}" target="_blank" ><i class="fa fa-eye" style="margin-top: 10px"></i></a>
+                                </div>
+                            </div>
+                        </div><!--/.portfolio-item-->
+                    @endforeach
+                @else
+
                 @endif
             </div>
         </div><!--/.container-->

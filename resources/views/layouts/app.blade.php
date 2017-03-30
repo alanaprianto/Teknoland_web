@@ -84,7 +84,7 @@
                     <li class="sub-menu">
                         <a href="{{ url('/events') }}">
                             <i class="fa fa-calendar "></i>
-                            <span>Events</span>
+                            <span>Portofolio</span>
                         </a>
                     <li class="sub-menu">
                         <a href="{{ url('/services') }}">

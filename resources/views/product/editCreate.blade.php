@@ -105,6 +105,28 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
+                                    <label for="type" class="col-md-4 control-label">Type</label>
+
+                                    <div class="col-md-6">
+
+                                        <select class="form-control" name="type">
+                                            {{$product ? $product->type :''}}
+                                            <option value="{{$product ? $product->type :''}}">{{$product ? $product>type :''}}</option>
+                                            <option value="software">Creative</option>
+                                            <option value="hardware">Corporate</option>
+                                            <option value="intergarsi">Intergarsi Software & Hardware </option>
+
+                                        </select>
+
+                                        @if ($errors->has('type'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <div class="col-md-8 col-md-offset-4">
                                         <button type="submit" class="btn btn-primary">
